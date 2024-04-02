@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="http_ethernet_style.css">
+</head>
+<body>
+    
+
+
+
+
+<div class="cont">
+	<hr class="cherta"></hr>
+	<h2>Всемирная паутина (World Wide Web)</h2>
+	<p>Всемирная паутина или веб (от англ. web — паутина) 
+— это часть Интернета, где веб-страницы являются 
+совместно используемыми. Вы можете сказать, что     
+просматриваете веб-страницу, если её адрес 
+начинается с http://.</p>
+	<p>Понятие WWW часто путают с понятием Интернет – глобальной телекоммуникационной сетью. Интернет состоит из огромного количества компьютеров и сетей, в то время как всемирную паутину составляет множество вебсайтов. Помимо WWW посредством Интернета работает множество различных служб: e-mail, IP-телефония, Интернет-радио и телевидение, файловые
+серверы, компьютерные игры и др. <p>
+Название «Интернет» происходит от англ. Interconnected Networks – объединенные сети. Это объединение можно представить на таком примере: компьютеры в классе объединены в сеть, эта сеть является звеном в сети учреждения, сеть учреждения подключена к сети провайдера Интернет, провайдер – к
+более крупному городскому или международному провайдеру. Связь между
+континентами осуществляется через кабели, проложенные по дну океанов.</p></p>
+	<h2>Веб страница</h2>
+	<p>Веб-страницей называется документ написанный на 
+языке HTML, который является общим по 
+всей паутине. Вы открываете эти документы с 
+помощью веб-браузера.</p>
+	<h2>Веб сайт</h2>
+	
+	<p>HTTP (Hypertext Transfer Protocol – «протокол передачи гипертекста») –
+предназначен для установления связи с веб-сервером и обеспечения доставки
+HTML-страниц веб-браузеру клиента. Иначе говоря, HTTP – это «язык», на
+котором общаются браузер и сервер. </p>
+	<p>Сайт — это просто набор веб-страниц, 
+расположенных на одном домене. <br>
+	<h2>Веб-сервер (HTTP-сервер)</h2>
+<p> Это программное обеспечение (ПО), предоставляющее доступ к сайтам. Наиболее популярными веб-серверами являются
+Apache (для ОС Windows и Unix) и Microsoft IIS (для Windows). Также вебсервером называют компьютер, на котором установлено такое ПО.</p>	
+	<p>URL (Uniform Resource Locator) – адрес ресурса. </p>
+
+<h2>Веб браузер</h2>
+	<ul>
+        <li> Программой, используемой для открытия HTML-документов, является браузер, вроде Firefox или Chrome.</li>
+       <li> Программой, используемой для создания HTML-документов, является текстовый редактор, в простейшем случае - блокнот.</li>
+    </ul> 
+	<h2>Составляющие интернета</h2>
+	<div style="width: 50%; height: 10%;"> <img src="\images\sost_ethernet.png" style="border-radius: 5px;"></div>
+
+
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+
+<script>
+    // Заголовок страницы (h2)
+    var title = 'Срез по теме "HTTP И ВСЕМИРНАЯ ПАУТИНА"';
+
+    // Это ваши вопросы
+    var questions=[
+        {
+            text: "Что такое Всемирная паутина?",
+            answers: 
+            	["Часть Интернета, где веб-страницы являются совместно используемыми",
+                "Телекоммуникационная сеть",
+                "Программное обеспечение для доступа к сайтам"],
+            correctAnswer: 0 // нумерация ответов с нуля!
+        },
+        {
+            text: "Какой протокол используется для установления связи с веб-сервером и доставки HTML-страниц веб-браузеру клиента?",
+            answers: 
+            	["HTTP",
+                "FTP",
+                "SMTP"],
+            correctAnswer: 0
+        },
+        {
+            text: "Что такое веб-страница? ",
+            answers: 
+            	["Программа для создания HTML-документов",
+                "Адрес ресурса в Интернете",
+                "Документ написанный на языке HTML, общий по всей Всемирной паутине"],
+            correctAnswer: 2
+        },
+        {
+            text: "Что такое сайт?",
+            answers: 
+            		["Набор веб-страниц, расположенных на одном домене",
+            		"Программное обеспечение для доступа к сайтам", 
+            		"Программа для создания HTML-документов"],
+            correctAnswer: 0
+        },
+        {
+            text: "Какая программа используется для открытия HTML-документов?",
+            answers: 
+            	["Текстовый редактор", 
+            	"Веб браузер", 
+            	"Программа для создания веб-страниц"],
+            correctAnswer: 1
+        }
+    ];
+
+    var yourAns = new Array;
+    var score = 0;
+
+    function Engine(question, answer) {
+        yourAns[question] = answer;
+    }
+
+    function Score() {
+        for (var i = 0; i < yourAns.length; ++i) {
+            if (yourAns[i] == questions[i].correctAnswer) {
+                ++score;
+            }
+        }
+
+        alert("Всего правильных ответов: " + score + " из 5");
+        yourAns = [];
+        score = 0;
+        clearForm("quiz");
+    }
+
+    function clearForm(name) {
+        var f = document.forms[name];
+        for (var i = 0; i < f.elements.length; ++i) {
+            if (f.elements[i].checked)
+                f.elements[i].checked = false;
+        }
+    }
+</script>
+
+<h2><script>document.write(title)</script></h2>
+<h3><script>document.write(subtitle)</script></h3>
+
+<form name="quiz">
+    <ol>
+        <script>
+            for(var q=0; q<questions.length; ++q) {
+                var question = questions[q];
+                var idx = 1 + q;
+
+                document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                for(var i in question.answers) {
+                    document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                        '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                }
+                document.writeln('</li>');
+            }
+        </script>
+    </ol>
+    <br>
+    <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px	">
+</form>
+</div>
+</div>

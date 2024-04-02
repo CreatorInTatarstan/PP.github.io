@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="browser_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Prism.highlightAll();
+    });
+</script>
+</head>
+<body>
+
+
+
+
+    <div class="cont">
+    	<hr class="cherta"></hr>
+    	<h2>HTML-документы</h2>
+    	<p>Веб-страницы — это HTML-документы, подобные другим файлам на вашем компьютере. Это просто текстовые файлы с расширением .html. </p>
+    	<p>На вашем компьютере у вас, вероятно, есть различные типы файлов: 
+	<ul>
+		<li>.jpg для изображений;</li>
+		<li>.mp3 для музыки;</li>
+		<li>.avi для видео;</li>
+		<li>.doc для документов Word;</li>
+		<li>.xls для электронных таблиц Excel</li>
+	</ul>
+<p>Каждый из этих типов файлов может быть открыт с помощью специальной программы. Некоторые из этих программ могут только открывать эти файлы, в то время как другие могут как открывать, так и создавать файлы. По умолчанию расширения файлов скрыты.</p>
+	<p>По умолчанию расширения файлов скрыты. Перейдите к этим инструкциям для отображения расширений файлов:</p>
+	<p style="margin-left: 30px;"> 
+	<ul>
+		<li> Windows 10: <a href="https://support.microsoft.com/en-us/windows/common-file-name-extensions-in-windows-da4a4430-8e76-89c5-59f7-1cdbbc75cb01" style="color:lightblue;"> Показать или скрыть расширения файлов</a></li>
+	</ul>
+		<p>Например:</p>
+	<ul>
+		<li>iTunes может открывать файлы mp3, но не может создавать их. </li>
+		<li> Microsoft Word может, однако, как открывать, так и создавать файлы doc.</li>
+	</ul> 
+
+	</p>
+
+	<table>
+		<tr>
+			<th>Программа</th>
+			<th>Тип</th>
+			<th>Может открывать эти файлы</th>
+			<th>Может создавать эти файлы</th>
+		</tr>
+		<tr style="background-color: #2b3e50;">
+			<td>Microsoft Word</td>
+			<td>Текстовый процессор</td>
+			<td>.doc .docx</td>
+			<td>Да</td>	
+		</tr>
+		<tr>
+			<td>Paint</td>
+			<td>Графика</td>
+			<td>.jpg .gif .bmp</td>
+			<td>Да</td>
+		</tr>
+		<tr style="background-color:#2b3e50">
+			<td>VLC</td>
+			<td>Видеоплеер</td>
+			<td>.avi .mpg</td>
+			<td>Нет</td>			
+		</tr>
+		<tr>
+			<td>iTunes</td>
+			<td><Музыкальный плеер/td>
+			<td>.mp3 .wav .aiff</td>
+			<td>Нет</td>
+		</tr>
+		<tr style="background-color:#2b3e50">
+			<td>Firefox	</td>
+			<td>Браузер	</td>
+			<td>.html	</td>
+			<td>Нет</td>
+		</tr>
+		<tr>
+			<td>Notepad++</td>
+			<td>Текстовый редактор</td>
+			<td>.text .html</td>
+			<td>Да</td>
+		</tr>	
+	</table>
+   
+    <p>Программой, используемой для открытия HTML-документов, является браузер, вроде Firefox или Chrome. Программой, используемой для создания HTML-документов, является текстовый редактор, вроде Notepad++ или Sublime Text.</p>
+    <h2>Исходный код HTML</h2>
+    <p>Код HTML выглядит следующим образом:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; ">&ltp>Привет, мир!&lt/p></code></pre>      
+	<p>Этот код записывается с помощью текстового редактора. Вы можете увидеть теги <b><р></b> и <b><р></b>, которые задают абзац.</p>
+	<p>При открытии в браузере эти теги не отображаются, а интерпретируются браузером:</p>
+	<p style="margin-left:30px">Привет, мир!</p>
+	<p>Браузер видит теги <b><р></b> и <b><р></b> и понимает, что «Привет, мир!» это текстовый абзац.</p>
+	<p>Помните, что HTML-документ может быть открыт двумя способами:</p>
+	<ul>
+		 <li>с помощью текстового редактора, который видит исходный код; </li>
+		 <li>с помощью браузера, который интерпретирует исходный код.</li>
+	</ul>
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+    <script>
+        // Заголовок страницы (h2)
+        var title = 'Срез по теме "Браузер"';
+
+        // Это ваши вопросы
+        var questions = [
+            {
+                text: "Чем являются веб-страницы в контексте HTML-документов?",
+                answers: [
+                	"Текстовыми файлами",
+                	"Изображениями",
+                	"Файлами музыки"],
+                correctAnswer: 0
+            },
+            {
+                text: "Какая программа может создавать и открывать файлы .doc?",
+                answers: [
+                	"Paint",
+                	"Microsoft Word",
+                	"iTunes"],
+                correctAnswer: 1
+            },
+            {
+                text: "Какой программой следует пользоваться для открытия HTML-документов?",
+                answers: [
+                	"VLC",
+                	 "Firefox",
+                	 "Notepad++"],
+                correctAnswer: 1
+            }
+        ];
+
+        var yourAns = new Array;
+        var score = 0;
+
+        function Engine(question, answer) {
+            yourAns[question] = answer;
+        }
+
+        function Score() {
+            for (var i = 0; i < yourAns.length; ++i) {
+                if (yourAns[i] == questions[i].correctAnswer) {
+                    ++score;
+                }
+            }
+
+            alert("Всего правильных ответов: " + score + " из 3");
+            yourAns = [];
+            score = 0;
+            clearForm("quiz");
+        }
+
+        function clearForm(name) {
+            var f = document.forms[name];
+            for (var i = 0; i < f.elements.length; ++i) {
+                if (f.elements[i].checked)
+                    f.elements[i].checked = false;
+            }
+        }
+    </script>
+
+    <h2><script>document.write(title)</script></h2>
+
+    <form name="quiz">
+        <ol>
+            <script>
+                for(var q=0; q<questions.length; ++q) {
+                    var question = questions[q];
+                    var idx = 1 + q;
+
+                    document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                    for(var i in question.answers) {
+                        document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                    }
+                    document.writeln('</li>');
+                }
+            </script>
+        </ol>
+        <br>
+        <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px ">
+    </form>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tenor+Sans&display=swap');
+
+
+body{
+    background-color: #1f2d3b;
+    overflow-x: hidden;
+    font-family: "Finlandica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+
+
+.cap{ 
+    width: 101%;
+    height: 60px;
+    background-color: #1f2d3b;
+    margin-left: -10px;
+    margin-top: -10px;
+    box-shadow: 0 -15px 30px 10px rgba(0, 0, 0, .5);    
+    /* border-bottom: 3px solid rgba(0, 0, 0, 0.118); - так пизже но марков хуйло  */
+
+}
+
+
+.logo{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-weight: bold;
+    margin-left:8.5% ;
+
+    font-family: "Finlandica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+
+
+.content{
+    padding-top: 25px;
+    width: 70%;
+    height: 35px;
+    margin-left: 15%;
+    margin-top: -15px;
+    text-align: center;
+
+}
+
+.mainBtn{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+    margin-right: 25px;
+    color: #8694a4;
+    transition-duration: 0.4s;
+    font-size: 14px;
+
+}    
+
+.mainBtn:hover{
+    color: rgb(232, 73, 33);
+    opacity: 0.4s;
+}
+
+.mainBtn1{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 25px;
+
+
+    color: White;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nach{
+    width: 80%;
+    margin-left: 10%;
+    border-bottom: 1px solid #8694a4;
+    color: #8694a4;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.block{
+    width: 1350px;
+    height: 1000px;
+    margin: 0  auto;
+
+}
+
+
+a{
+    color: white;
+    font-size: 26px;
+    transition-duration: 0.4s;
+}
+
+a:hover{
+    color: orange;
+    border-bottom: 2px orange solid;
+}

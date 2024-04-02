@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="osn_web_style.css">
+</head>
+<body>
+	
+   
+
+
+
+
+    <div class="cont">
+
+		<hr class="cherta"></hr>
+		<h2>Интернет ≠ web</h2>
+		<p class="text">Интернет был изобретен в 1969 году для подключения компьютеров по всей территории США. В настоящее время миллиарды устройств (включая персональные компьютеры, ноутбуки, мобильные телефоны, телевизоры, холодильники и др.) соединены между собой.
+		</p>
+		<h2>Клиент и сервер</h2>
+		<p class="text">Как правило, соединение в Интернете происходит только между двумя компьютерами: <br>
+        <ul>
+            <li>Сервер предоставляет информацию</li>
+            <li>Клиент получает эту информацию</li>
+            <li>Клиент может принимать множество форм:</li>
+            <ul>
+                <li>веб-браузер (например, Firefox);</li>
+                <li>клиент электронной почты (например, Outlook);</li>
+                <li>мессенджер (например, Telegram);</li>
+                <li>сервис потокового видео (например, Twitch).</li>
+            </ul>
+        </ul>
+
+		<h2>IP-адрес</h2>
+		<p class="text"> Как и каждый дом имеет определённый и 
+уникальный почтовый адрес, каждый компьютер, 
+подключенный к Интернету, получает IP-адрес чтобы идентифицироваться в сети. <br>
+<ul>
+    <li>IPv4-адрес, как правило, выглядит как сочетание 
+четырёх чисел от 0 до 255: 91.198.174.192.
+3 февраля 2011 агентство IANA распределило 
+последние 5 блоков /8 IPv4.</li>
+    <li>IPv6 отображаются как восемь 
+четырёхзначных шестнадцатеричных чисел, 
+например 
+2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d
+</li>
+</ul>
+
+		<h2>Домен</h2>
+		<p class="text">Созданы в 1985 году. Они связывают IP-адрес типа 
+91.198.174.192 со строкой текста, вроде 
+wikipedia.org. 
+Домен состоит из трёх частей, которые читаются 
+справа налево: <br>
+<ul>
+    <li>домен верхнего уровня: существуют общие (.com, .org, .net) и по отдельным странам (.us, .nl, .fr);</li>
+    <li>имя домена: имя вроде wikipedia или marksheet, 
+которое может включать буквы, цифры, но не 
+пробел или точку;</li>
+    <li>поддомен (по желанию).</li>
+</ul>
+
+		<h2>Протокол</h2>
+		<p class="text">Целью соединения всех этих компьютеров является 
+возможность взаимодействия друг с другом. И как 
+люди говорят на разных языках, компьютеры в 
+Интернете беседуют с помощью протоколов. <br>
+Примеры протоколов:
+	<table>
+		<tr>
+			<th>Протокол</th>
+			<th>Используется</th>
+			<th>Создан</th>
+		</tr>
+		<tr style="background-color:#2b3e50">
+			<th>FTP</th>
+			<td>Для передачи файлов</td>
+			<td>1971</td>
+		</tr>
+		<tr>
+			<th>SMTP</th>
+			<td>Для отправки писем </td>
+			<td>1971</td>
+		</tr>
+		<tr style="background-color:#2b3e50">
+			<th>IMAP</th>
+			<td>Для получения писем</td>
+			<td>1986</td>
+		</tr>
+		<tr>
+			<th>IRC </th>
+			<td>Для чата</td>
+			<td>1988</td>
+		</tr>
+		<tr style="background-color:#2b3e50">
+			<th>HTTP</th>
+			<td>Для просмотра HTML-документов (веб-страниц)</td>
+			<td>1989</td>
+		</tr>
+	</table>
+
+
+
+	<div class="test" style="margin-top: 70px; line-height: 25px">
+
+<script>
+    // Заголовок страницы (h2)
+    var title = 'Срез по теме "Основы WEB программирования"';
+
+    // Это ваши вопросы
+    var questions=[
+        {
+            text: "Что предоставляет сервер в Интернете?",
+            answers: 
+            	["Информацию",
+                "Подключение",
+                "Защиту"],
+            correctAnswer: 0 // нумерация ответов с нуля!
+        },
+        {
+            text: "Когда был изобретен интернет",
+            answers: 
+            	["1985",
+                "1969",
+                "2001"],
+            correctAnswer: 1
+        },
+        {
+            text: "Какие части составляют домен?",
+            answers: 
+            	["Домен верхнего уровня, имя домена, поддомен",
+                "Имя домена, домен верхнего уровня, IP-адрес",
+                "Поддомен, домен верхнего уровня, имя домена"],
+            correctAnswer: 0
+        },
+        {
+            text: "Какой протокол используется для просмотра HTML-документов в интернете?",
+            answers: 
+            		["FTP",
+            		"SMTP", 
+            		"HTTP"],
+            correctAnswer: 2
+        },
+        {
+            text: "Как называется уникальный адрес компьютера в Интернете?",
+            answers: 
+            	["MAC-адрес", 
+            	"IPv4-адрес", 
+            	"Почтовый адрес"],
+            correctAnswer: 1
+        }
+    ];
+
+    var yourAns = new Array;
+    var score = 0;
+
+    function Engine(question, answer) {
+        yourAns[question] = answer;
+    }
+
+    function Score() {
+        for (var i = 0; i < yourAns.length; ++i) {
+            if (yourAns[i] == questions[i].correctAnswer) {
+                ++score;
+            }
+        }
+
+        alert("Всего правильных ответов: " + score + " из 5");
+        yourAns = [];
+        score = 0;
+        clearForm("quiz");
+    }
+
+    function clearForm(name) {
+        var f = document.forms[name];
+        for (var i = 0; i < f.elements.length; ++i) {
+            if (f.elements[i].checked)
+                f.elements[i].checked = false;
+        }
+    }
+</script>
+
+<h2><script>document.write(title)</script></h2>
+<h3><script>document.write(subtitle)</script></h3>
+
+<form name="quiz">
+    <ol>
+        <script>
+            for(var q=0; q<questions.length; ++q) {
+                var question = questions[q];
+                var idx = 1 + q;
+
+                document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                for(var i in question.answers) {
+                    document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                        '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                }
+                document.writeln('</li>');
+            }
+        </script>
+    </ol>
+    <br>
+    <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px	">
+</form>
+</div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
