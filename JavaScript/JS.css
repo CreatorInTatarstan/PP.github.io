@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tenor+Sans&display=swap');
+
+
+body{
+    background-color: #1f2d3b;
+    overflow-x: hidden;
+    font-family: "Finlandica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.font{
+  background-color: dimgrey; color: #8694a4; border-radius: 3px;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+
+
+.cap{ 
+    width: 101%;
+    height: 60px;
+    background-color: #1f2d3b;
+    margin-left: -10px;
+    margin-top: -10px;
+    box-shadow: 0 -15px 30px 10px rgba(0, 0, 0, .5);    
+    /* border-bottom: 3px solid rgba(0, 0, 0, 0.118); - так пизже но марков хуйло  */
+
+}
+
+
+.logo{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-weight: bold;
+    margin-left:8.5% ;
+
+    font-family: "Finlandica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+
+
+.content{
+    padding-top: 25px;
+    width: 70%;
+    height: 35px;
+    margin-left: 15%;
+    margin-top: -15px;
+    text-align: center;
+
+}
+
+.mainBtn{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+    margin-right: 25px;
+    color: #8694a4;
+    transition-duration: 0.4s;
+    font-size: 14px;
+
+}    
+
+.mainBtn:hover{
+    color: rgb(232, 73, 33);
+    opacity: 0.4s;
+}
+
+.mainBtn1{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 25px;
+
+
+    color: White;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nach{
+    width: 80%;
+    margin-left: 10%;
+    border-bottom: 1px solid #8694a4;
+    color: #8694a4;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.block{
+    width: 1000px;
+
+    margin: 0  auto;
+
+}
+
+.zag{
+    
+    font-size: 30px;
+
+    width: 29%;
+    color: white;
+    transition-duration: 0.4s;
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    user-select: none;
+    color: ;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+
+  .zag:hover {
+
+ 
+        color: orange;
+        border-bottom: 2px solid orange;
+
+  }
+
+  .zag::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
+
+.text{
+    margin: 0 auto;
+    font-size: 18px;
+    color: white;
+}
+
+
+  .info {
+    background-color: #f9f9ff;
+    padding: 10px 25px;
+  }
+  
+  .info__switch {
+    display: none;
+  }
+  
+  .text {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.8s;
+  }
+  
+  .info__switch:checked~.text {
+    max-height: 10000px;
+  }
+  
+
+  
+  .info__switch:checked~.info__headline::before {
+    transform: rotate(180deg) translateY(6px);
+  }
+  
+
+
+  .text1{
+    font-size: 26px;
+    color: white;
+    
+  }
+
+  .blockForText{
+    width: 700px;
+    height: 200px ;
+    border: 2px solid #8694a4;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  .zagForBlock{
+    display: flex;
+    margin-left: 10px;
+  }
+
+
+  .imgForZag{
+    width: 20px;
+    height: 20px;
+  }
+  
+
+  .samZag{
+    margin-left: 10px;
+  }
+  
+
+  .aInText{
+    transition-duration: 0.4s;
+    color:#8694a4 ;
+  }
+
+  .aInText:hover{
+    color: orange;
+    border-bottom: 2px solid orange;
+  
+  }
+
+  .input{
+    transition-duration: 0.4s;
+    background-color: #1f2d3b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600px;
+  }
+  .input:hover{
+    color: orange;
+    border: orange;
+    background-color: white;
+  }
+
+
+
+/* Щас будет второй раздел */
+
+.info__switch1 {
+  display: none;
+}
+
+.info__body3 {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  
+}
+
+.info__switch1:checked~.info__body3 {
+  max-height: 10500px;
+}
+
+.info__headline1::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 4px;
+
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.info__switch1:checked~.info__headline1::before {
+  transform: rotate(180deg) translateY(6px);
+}
+
+.info__headline1 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  color: white;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 30px;
+  transition-duration: 0.4s;
+}
+
+.info__headline1:hover {
+  text-decoration: underline;
+  color: orange;
+
+
+}
+
+.textIn{
+  color: white;
+  font-size: 18px;
+}
+
+.HZ{
+  font-size: 30px;
+
+}
+
+.code {
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color:black;
+  padding: 15px 0 15px 30px;
+  font-family: Consolas;
+}
+
+.blockForTextA{
+  width: 700px;
+  height: 100px ;
+  border: 2px solid #8694a4;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+.footer {
+  position: relative;
+	margin: 0 auto;
+  bottom: 0px;
+	height: 200px;
+	margin-top: 300px;
+}
+.futer_logo {
+  display: flex;
+}
+
+.logo1{
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-left:0 auto;
+    text-align: center;	
+    width: 15%;
+    height: 50px;
+}
+
+.cherta {
+  width: 35%;
+  height: 1px;
+  background-color: white;
+  margin-top: 20px;
+}
+.footer2 {
+  height: 200px;
+}
+.data {
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.data p {
+  font-size: 11px;
+  color: white;
+
+}
+.our_place {
+  margin: 0 auto;
+  width: 250px;
+  text-align: center;
+}

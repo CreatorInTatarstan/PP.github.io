@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="JS.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="cap">
+        <div class="logo"><font color="orange" ><\> Html</font>School</div>
+        <div class="content">
+            <a class="mainBtn" href="/index.html">Главная</a>
+            <a class="mainBtn" href="">Самостоятельная работа</a>
+            <a class="mainBtn" href="">Поддержка</a>
+            <a class="mainBtn" href="контакты/contacts.html">О нас</a>
+        </div>
+
+        <div class="nach">
+            Изучение <font color="orange">Java</font>Script
+        </div>
+        <br><br>
+        <div class="block">
+            <input id="info__body_1" class="info__switch" type="checkbox">
+            <label for="info__body_1" class="zag">Введение в <font color="orange">Java</font>Script</label>
+            <div class="text">
+                Изначально <font color="orange">Java</font>Script был создан, чтобы «сделать веб-страницы живыми».
+
+                Программы на этом языке называются скриптами. Они могут встраиваться в HTML и выполняться автоматически при загрузке веб-страницы.
+                
+                Скрипты распространяются и выполняются, как простой текст. Им не нужна специальная подготовка или компиляция для запуска.
+              <br><br>
+                <div class="blockForText"> 
+                    <div class="zagForBlock">
+                        <img class="imgForZag" src="images/inforegular_106345.png" alt="">
+                        <div class="samZag">
+                            Почему <font color="orange">Java</font>Script?
+                        </div>
+                    </div>
+                    <br>
+                    Когда JavaScript создавался, у него было другое имя – «LiveScript». Однако, язык Java был очень популярен в то время, и было решено, что позиционирование JavaScript как «младшего брата» Java будет полезно.
+<br><br>
+Со временем JavaScript стал полностью независимым языком со своей собственной спецификацией, называющейся <a class="aInText" href="https://ru.wikipedia.org/wiki/ECMAScript">ECMAScript</a>, и сейчас не имеет никакого отношения к Java.
+
+
+                
+                </div>
+                <br><br>
+                Сегодня JavaScript может выполняться не только в браузере, но и на сервере или на любом другом устройстве, которое имеет специальную программу, называющуюся <a class="aInText" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%B8%D0%B6%D0%BE%D0%BA_JavaScript">«движком» JavaScript</a>.
+<br>
+У браузера есть собственный движок, который иногда называют «виртуальная машина JavaScript».
+<br>
+Разные движки имеют разные «кодовые имена». Например:
+<ul>
+    <li><a class="aInText" href="https://ru.wikipedia.org/wiki/V8_(%D0%B4%D0%B2%D0%B8%D0%B6%D0%BE%D0%BA_JavaScript)">V8</a> – в Chrome, Opera и Edge.</li>
+    <li><a class="aInText" href="https://ru.wikipedia.org/wiki/SpiderMonkey">SpiderMonkey</a> – в Firefox.</li>
+    <li>…Ещё есть «Chakra» для IE, «JavaScriptCore», «Nitro» и «SquirrelFish» для Safari и т.д.</li>
+</ul>
+<br>
+Эти названия полезно знать, так как они часто используются в статьях для разработчиков. Мы тоже будем их использовать. Например, если «функциональность X поддерживается V8», тогда «Х», скорее всего, работает в Chrome, Opera и Edge.
+<br><br>
+
+<div class="blockForText"> 
+    <div class="zagForBlock">
+        <img class="imgForZag" src="images/inforegular_106345.png" alt="">
+        <div class="samZag">
+            Как работают движки?
+        </div>
+    </div>
+    <br>
+    Движки сложны. Но основы понять легко.
+<br><br>
+Движок применяет оптимизации на каждом этапе. Он даже просматривает скомпилированный скрипт во время его работы, анализируя проходящие через него данные, и применяет оптимизации к машинному коду, полагаясь на полученные знания. В результате скрипты работают очень быстро.
+
+
+
+</div>
+
+<br><br>
+              <div class="text1">
+                Что может <font color="orange">Java</font>Script в браузере?
+              </div>
+              <div>Современный JavaScript – это «безопасный» язык программирования. Он не предоставляет низкоуровневый доступ к памяти или процессору, потому что изначально был создан для браузеров, не требующих этого.
+<br><br>
+                Возможности JavaScript сильно зависят от окружения, в котором он работает. Например, Node.JS поддерживает функции чтения/записи произвольных файлов, выполнения сетевых запросов и т.д.
+                <br><br>
+                В браузере для JavaScript доступно всё, что связано с манипулированием веб-страницами, взаимодействием с пользователем и веб-сервером.</div>
+<br>
+Например, в браузере JavaScript может:
+                <ul>
+                    <li>Добавлять новый HTML-код на страницу, изменять существующее содержимое, модифицировать стили.
+                    </li>
+                    <li>Реагировать на действия пользователя, щелчки мыши, перемещения указателя, нажатия клавиш.</li>
+                    <li>Отправлять сетевые запросы на удалённые сервера, скачивать и загружать файлы (технологии <a class="aInText" href="https://ru.wikipedia.org/wiki/AJAX">AJAX</a> и <a class="aInText" href="https://ru.wikipedia.org/wiki/Comet_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)">COMET</a>).
+                    </li>
+                    <li>Получать и устанавливать куки, задавать вопросы посетителю, показывать сообщения.
+                    </li>
+                    <li>Запоминать данные на стороне клиента («local storage»).
+                    </li>
+                </ul>
+
+                <div class="text1">
+                    Чего <font color="red">НЕ</font> может <font color="orange">Java</font>Script в браузере?
+                  </div>
+
+                  
+                  <div>Возможности JavaScript в браузере ограничены ради безопасности пользователя. Цель заключается в предотвращении доступа недобросовестной веб-страницы к личной информации или нанесения ущерба данным пользователя.</div>
+                  <br><br>
+                  <div>Примеры таких ограничений включают в себя:</div>
+                  <ul>
+                    <li>JavaScript на веб-странице не может читать/записывать произвольные файлы на жёстком диске, копировать их или запускать программы. Он не имеет прямого доступа к системным функциям ОС.
+<br><br>
+                        Современные браузеры позволяют ему работать с файлами, но с ограниченным доступом, и предоставляют его, только если пользователь выполняет определённые действия, такие как «перетаскивание» файла в окно браузера или его выбор с помощью тега <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">input</font>.
+                        <br><br>
+                        Существуют способы взаимодействия с камерой/микрофоном и другими устройствами, но они требуют явного разрешения пользователя. Таким образом, страница с поддержкой JavaScript не может незаметно включить веб-камеру, наблюдать за происходящим и отправлять информацию в <a class="aInText" href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8  ">ФСБ</a>.</li>
+
+<br>
+                        <li>Различные окна/вкладки не знают друг о друге. Иногда одно окно, используя JavaScript, открывает другое окно. Но даже в этом случае JavaScript с одной страницы не имеет доступа к другой, если они пришли с разных сайтов (с другого домена, протокола или порта).
+<br><br>
+                            Это называется «Политика одинакового источника» (Same Origin Policy). Чтобы обойти это ограничение, обе страницы должны согласиться с этим и содержать JavaScript-код, который специальным образом обменивается данными.
+                            <br><br>
+                            Это ограничение необходимо, опять же, для безопасности пользователя. Страница <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">https://anysite.com</font>, которую открыл пользователь, не должна иметь доступ к другой вкладке браузера с URL <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">https://gmail.com</font> и воровать информацию оттуда.</li>
+                            <br>
+                            <li>
+                                JavaScript может легко взаимодействовать с сервером, с которого пришла текущая страница. Но его способность получать данные с других сайтов/доменов ограничена. Хотя это возможно в принципе, для чего требуется явное согласие (выраженное в заголовках HTTP) с удалённой стороной. Опять же, это ограничение безопасности.
+                            </li>
+                        </ul>
+                        <br>
+
+                        <img src="images/js.png" style="margin-left: 25px;" alt="">
+                        <p>Подобные ограничения не действуют, если JavaScript используется вне браузера, например — на сервере. Современные браузеры предоставляют плагины/расширения, с помощью которых можно запрашивать дополнительные разрешения.</p>
+
+                        <div class="text1">
+                            Что делает <font color="orange">Java</font>Script особенным?
+                          </div>
+                          <br>
+                          Как минимум, <i>три</i> сильные стороны JavaScript:
+                          <ul style="width: 800px; height: 150px; border: 2px solid #8694a4; border-radius: 15px;">
+                            <li>Полная интеграция с HTML/CSS.</li>
+                            <br>
+                            <li>Простые вещи делаются просто.</li>
+                            <br>    
+                            <li>Поддерживается всеми основными браузерами и включён по умолчанию.</li>
+                          </ul>
+
+                          <p>JavaScript – это единственная браузерная технология, сочетающая в себе все эти три вещи.
+<br><br>
+                            Вот что делает JavaScript особенным. Вот почему это самый распространённый инструмент для создания интерфейсов в браузере.
+                            <br><br>
+                            Хотя, конечно, JavaScript позволяет делать приложения не только в браузерах, но и на сервере, на мобильных устройствах и т.п.</p>
+
+<br>
+                            <div class="text1">
+                                Языки <i>"над"</i> <font color="orange">Java</font>Script
+                              </div>
+                              <br><br>
+                              <p>Синтаксис JavaScript подходит не под все нужды. Разные люди хотят иметь разные возможности.
+<br><br>
+                                Это естественно, потому что проекты разные и требования к ним тоже разные.
+                                <br><br>
+                                Так, в последнее время появилось много новых языков, которые транспилируются (конвертируются) в JavaScript, прежде чем запустятся в браузере.
+                                <br><br>
+                                Современные инструменты делают транспиляцию очень быстрой и прозрачной, фактически позволяя разработчикам писать код на другом языке, автоматически преобразуя его в JavaScript «под капотом».
+                                <br><br><br>
+                                Примеры таких языков:</p>
+                                <ul>
+                                    
+                                    <li><a class="aInText" href="https://coffeescript.org/">CoffeeScript</a> добавляет «синтаксический сахар» для JavaScript. Он вводит более короткий синтаксис, который позволяет писать чистый и лаконичный код. Обычно такое нравится Ruby-программистам.</li>
+                                    <br><li><a class="aInText" href="https://typescriptlang.org/">TypeScript</a> концентрируется на добавлении «строгой типизации» для упрощения разработки и поддержки больших и сложных систем. Разработан Microsoft.</li>
+                                    <br><li><a class="aInText" href="https://flow.org/">Flow</a> тоже добавляет типизацию, но иначе. Разработан Facebook.</li>
+                                    <br><li><a class="aInText" href="https://dart.dev/">Dart</a> стоит особняком, потому что имеет собственный движок, работающий вне браузера (например, в мобильных приложениях). Первоначально был предложен Google, как замена JavaScript, но на данный момент необходима его транспиляция для запуска так же, как для вышеперечисленных языков.</li>
+                                    <br><li><a class="aInText" href="https://brython.info/">Brython</a> транспилирует Python в JavaScript, что позволяет писать приложения на чистом Python без JavaScript.</li>
+                                </ul>
+                                <br><br>
+                                <p>Есть и другие. Но даже если мы используем один из этих языков, мы должны знать JavaScript, чтобы действительно понимать, что мы делаем.</p>
+                                <div class="text1">
+                                    Итого:
+                                  </div>
+                                  <ul>
+                                    <br><li>JavaScript изначально создавался только для браузера, но сейчас используется на многих других платформах.</li>
+                                    <br><li>Сегодня JavaScript занимает уникальную позицию в качестве самого распространённого языка для браузера, обладающего полной интеграцией с HTML/CSS.</li>
+                                    <br><li>Многие языки могут быть «транспилированы» в JavaScript для предоставления дополнительных функций. Рекомендуется хотя бы кратко рассмотреть их после освоения JavaScript.</li>
+                                  </ul>
+                                  <br><br>
+                                  <div class="test" style="margin-top: 70px; line-height: 25px">
+
+                                    <script>
+                                        // Заголовок страницы (h2)
+                                        var title = 'Срез по теме "Введение в JavaScript"';
+                                    
+                                        // Это ваши вопросы
+                                        var questions=[
+                                            {
+                                                text: "Какое первоначальное имя было у JavaScript?",
+                                                answers: 
+                                                    ["LiveScript",
+                                                    "WebScript",
+                                                    "AdelScript"],
+                                                correctAnswer: 0 // нумерация ответов с нуля!
+                                            },
+                                            {
+                                                text: "Какие браузеры используют движок с названием V8?",
+                                                answers: 
+                                                    ["Chrome",
+                                                    "Firefox",
+                                                    "Safari"],
+                                                correctAnswer: 0
+                                            },
+                                            {
+                                                text: "Что может делать JavaScript в браузере? ",
+                                                answers: 
+                                                    ["Запускать программы на компьютере пользователя",
+                                                    "Манипулировать веб-страницами, взаимодействовать с пользователем и веб-сервером",
+                                                    "Читать/записывать произвольные файлы на жёстком диске"],
+                                                correctAnswer: 1
+                                            },
+                                            {
+                                                text: "Какие ограничения есть у JavaScript в браузере?",
+                                                answers: 
+                                                        ["Не может читать/записывать произвольные файлы на жёстком диске или запускать программы",
+                                                        "Нет ограничений, JavaScript может делать всё", 
+                                                        " Может незаметно включить веб-камеру и наблюдать за пользователем"],
+                                                correctAnswer: 0
+                                            },
+                                            {
+                                                text: " Какой язык программирования является младшим братом JavaScript??",
+                                                answers: 
+                                                    ["C++", 
+                                                    "Java", 
+                                                    "Python"],
+                                                correctAnswer: 1
+                                            }
+                                        ];
+                                    
+                                        var yourAns = new Array;
+                                        var score = 0;
+                                    
+                                        function Engine(question, answer) {
+                                            yourAns[question] = answer;
+                                        }
+                                    
+                                        function Score() {
+                                            for (var i = 0; i < yourAns.length; ++i) {
+                                                if (yourAns[i] == questions[i].correctAnswer) {
+                                                    ++score;
+                                                }
+                                            }
+                                    
+                                            alert("Всего правильных ответов: " + score + " из 5");
+                                            yourAns = [];
+                                            score = 0;
+                                            clearForm("quiz");
+                                        }
+                                    
+                                        function clearForm(name) {
+                                            var f = document.forms[name];
+                                            for (var i = 0; i < f.elements.length; ++i) {
+                                                if (f.elements[i].checked)
+                                                    f.elements[i].checked = false;
+                                            }
+                                        }
+                                    </script>
+                                    
+                                    <h2><script>document.write(title)</script></h2>
+                                    <h3><script>document.write(subtitle)</script></h3>
+                                    
+                                    <form name="quiz">
+                                        <ol>
+                                            <script>
+                                                for(var q=0; q<questions.length; ++q) {
+                                                    var question = questions[q];
+                                                    var idx = 1 + q;
+                                    
+                                                    document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                                                    for(var i in question.answers) {
+                                                        document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                                                            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                                                    }
+                                                    document.writeln('</li>');
+                                                }
+                                            </script>
+                                        </ol>
+                                        <br>
+                                        <input class="input" type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px	">
+                                    </form>
+                                    </div>
+
+<br><br>
+
+
+
+</div>
+
+<div class="block">
+    <input id="info__body_2" class="info__switch1" type="checkbox">
+    <label for="info__body_2" class="info__headline1">Основы <font color="orange">Java</font>Script</label>
+    <div class="info__body3">
+
+        <div class="textIn">
+            <div class="HZ">
+                Тег "scrpit"
+            </div>
+            <p>Программы на JavaScript могут быть вставлены в любое место HTML-документа с помощью тега <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">script</font>.</p>
+            <br>
+            <div>Для примера:</div>
+            <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+                <code class="language-html" style="text-shadow: none; ">
+&lt!DOCTYPE HTML>
+&lthtml>
+                    
+&ltbody>
+                    
+&ltp>Перед скриптом...&lt/p>
+                    
+&ltscript>
+alert( 'Привет, мир!' );
+&lt/script>
+                    
+&ltp>...После скрипта.&lt/p>
+                    
+&lt/body>
+                    
+&lt/html>
+</code></pre>
+
+<div>Если у вас много <font color="orange">Java</font>Script-кода, вы можете поместить его в отдельный файл.<div>
+<br><br>
+    Файл скрипта можно подключить к HTML с помощью атрибута <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">src</font>:</div>
+        
+ <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; ">&ltscript src="/path/to/script.js">&lt/script>
+</code></pre>
+<br>
+
+    Здесь <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">/path/to/script.js</font> – это абсолютный путь от корневой папки до необходимого файла. Корневой папкой может быть корень диска или корень сайта, в зависимости от условий работы сайта. Также можно указать относительный путь от текущей страницы. Например, <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">src="script.js"</font> или <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">src="./script.js"</font> будет означать, что файл <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">"script.js"</font> находится в текущей папке.
+<br>
+Можно указать и полный URL-адрес. <br>Например:
+</div>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-html" style="text-shadow: none; ">&ltscript src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js">&lt/script>
+</code></pre>
+
+<div >Для подключения нескольких скриптов используйте несколько тегов:</div>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; ">
+        &ltscript src="/js/script1.js">&lt/script>
+        &ltscript src="/js/script2.js">&lt/script>
+        …
+    </code></pre>
+    <br>
+    <div class="HZ">Итого:</div>
+
+    <br>
+    <ul>
+        <li>Для добавления кода JavaScript на страницу используется тег <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">&ltscript>&lt/script></font></li>
+        <li>Атрибуты <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">type</font> и <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">language</font> необязательны.</li>
+        <li>Скрипт во внешнем файле можно вставить с помощью <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">&ltscript src="path/to/script.js">&lt/script></font>.</li>
+        
+    </ul>
+    <div>Нам ещё многое предстоит изучить про браузерные скрипты и их взаимодействие со страницей. Но, как уже было сказано, эта часть учебника посвящена именно языку JavaScript, поэтому здесь мы постараемся не отвлекаться на детали реализации в браузере. Мы воспользуемся браузером для запуска JavaScript, это удобно для онлайн-демонстраций, но это только одна из платформ, на которых работает этот язык.</div>
+    </div>
+
+
+
+
+
+
+    
+
+
+    <br><br>
+    <div style="color: white;">
+    <div class="HZ" >Взаимодействие: alert, prompt, confirm</div>
+    <br>
+    <div>Так как мы будем использовать браузер как демо-среду, нам нужно познакомиться с несколькими функциями его интерфейса, а именно: <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">alert</font>, <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">prompt</font> и <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">confirm</font>.</div>
+    <br><div class="HZ" >alert</div><br>
+    <div>С этой функцией мы уже знакомы. Она показывает сообщение и ждёт, пока пользователь нажмёт кнопку «ОК».
+<br><br>
+        Например:</div>
+        <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-js" style="text-shadow: none; ">    alert("Hello");
+</code></pre>
+<br>
+<div>Это небольшое окно с сообщением называется модальным окном. Понятие модальное означает, что пользователь не может взаимодействовать с интерфейсом остальной части страницы, нажимать на другие кнопки и т.д. до тех пор, пока взаимодействует с окном. В данном случае – пока не будет нажата кнопка «OK».</div>
+<br><div class="HZ" >prompt</div><br>
+<div>Функция <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">prompt</font> принимает два аргумента:</div>
+<br>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-js" style="text-shadow: none; ">    result = prompt(title, [default]);
+    </code></pre>
+    <div>
+        Этот код отобразит модальное окно с текстом, полем для ввода текста и кнопками OK/Отмена.
+<br>
+<font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">title</font>
+<br>
+Текст для отображения в окне.
+<br>
+<font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">default</font>
+<br>
+ второй параметр, который устанавливает начальное значение в поле для текста в окне.
+
+    </div>
+    <br><br>
+    <div class="blockForTextA
+"> 
+                    <div class="zagForBlock">
+                        <img class="imgForZag" src="images/inforegular_106345.png" alt="">
+                        <div class="samZag">
+                            <b>Квадратные скобки в синтаксисе <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">[...]</font></b>
+                        </div>
+                    </div>
+                    <br>
+                    Квадратные скобки вокруг <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">default</font> в описанном выше синтаксисе означают, что параметр факультативный, необязательный.
+
+                
+                </div>
+<div>
+                Пользователь может напечатать что-либо в поле ввода и нажать OK. Введённый текст будет присвоен переменной <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">result</font>. Пользователь также может отменить ввод нажатием на кнопку «Отмена» или нажав на клавишу <font style="border: 2px solid white; border-radius: 5px; padding: 1px 3px;">Esc</font>. В этом случае значением result станет <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">null</font>.
+<br>
+                Вызов <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">prompt</font> возвращает текст, указанный в поле для ввода, или <font style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">null</font>, если ввод отменён пользователем.
+                <br><br><br>
+                Например:
+                <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+                    <code class="language-js" style="text-shadow: none; ">
+    let age = prompt('Сколько тебе лет?', 100);
+    alert(`Тебе ${age} лет!`); // Тебе 100 лет!
+                    </code></pre>
+<br><br>
+                    <div class="HZ" >цикл "while"</div>
+
+                    <div>
+                        <br><br>
+                        Цикл <font class="font" style="background-color: dimgrey; color: #8694a4; border-radius: 3px;">while</font> имеет следующий синтаксис:
+                    </div>
+                    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+                        <code class="language-js" style="text-shadow: none; ">
+while (condition) {
+// код
+// также называемый "телом цикла"
+}
+                        </code></pre>
+                        <div>
+                            <div>
+                                Код из тела цикла выполняется, пока условие <font class="font">condition</font> истинно.
+
+Например, цикл ниже выводит <font class="font">i</font>, пока <font class="font">i < 3</font>:
+                            </div>
+                            <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+                                <code class="language-js" style="text-shadow: none; ">
+let i = 0;
+while (i < 3) { // выводит 0, затем 1, затем 2
+alert( i );
+i++;
+}
+                                </code></pre>
+
+<br><br>
+
+        <div class="HZ">Цикл «for»</div>
+        <div> Более сложный, но при этом самый распространённый цикл — цикл <font class="font">for</font>.
+
+            Выглядит он так:</div>
+            <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+                <code class="language-js" style="text-shadow: none; ">
+for (начало; условие; шаг) {
+// ... тело цикла ...
+}
+                </code></pre>
+
+                <div>Давайте разберёмся, что означает каждая часть, на примере. Цикл ниже выполняет <font class="font">alert(i)</font> для <font class="font">i</font> от <font class="font">0</font> до (но не включая) <font class="font">3</font>:</div>
+<br>
+            </div>
+            <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+            <code class="language-js" style="text-shadow: none; ">
+for (let i = 0; i < 3; i++) { // выведет 0, затем 1, затем 2
+alert(i);
+}
+                                </code></pre>
+
+<div class="HZ">
+    Прерывание цикла: «break»<br></div>
+    <br><br>
+Обычно цикл завершается при вычислении условия в false.
+<br>
+Но мы можем выйти из цикла в любой момент с помощью специальной директивы break.
+<br>
+Например, следующий код подсчитывает сумму вводимых чисел до тех пор, пока посетитель их вводит, а затем – выдаёт: 
+</div>
+<br><br>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-js" style="text-shadow: none; ">
+let sum = 0;
+
+while (true) {
+    
+let value = +prompt("Введите число", '');
+    
+if (!value) break; // (*)
+    
+sum += value;
+    
+}
+alert( 'Сумма: ' + sum );
+                                    </code></pre>
+                                    <br>
+<div>Директива <font class="font">break</font> в строке (*) полностью прекращает выполнение цикла и передаёт управление на строку за его телом, то есть на <font class="font">alert</font>.
+
+    Вообще, сочетание <font class="font">«бесконечный цикл + break»</font> – отличная штука для тех ситуаций, когда условие, по которому нужно прерваться, находится не в начале или конце цикла, а посередине или даже в нескольких местах его тела.</div>
+<br><br><div class="HZ">If</div><br><br>
+<div>Инструкция<font class="font">if(...)</font>  вычисляет условие в скобках и, если результат true, то выполняет блок кода.
+
+    Например:</div>
+    <br><br>
+
+
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+        <code class="language-js" style="text-shadow: none; ">
+let year = prompt('В каком году была опубликована спецификация ECMAScript-2015?', '');
+
+if (year == 2015) alert( 'Вы правы!' );
+                                            </code></pre>
+
+
+
+
+<br><br>
+    <div>В примере выше, условие – это простая проверка на равенство <font class="font">(year == 2015</font>), но оно может быть и гораздо более сложным.
+<br>
+        Если мы хотим выполнить более одной инструкции, то нужно заключить блок кода в фигурные скобки:</div><br><br>
+
+
+        <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+            <code class="language-js" style="text-shadow: none; ">
+if (year == 2015) {
+alert( "Правильно!" );
+alert( "Вы такой умный!" );
+}
+                                                </code></pre>
+
+        <br><br><div>Мы рекомендуем использовать фигурные скобки <font class="font">{}</font> всегда, когда вы используете инструкцию <font class="font">if</font>, даже если выполняется только одна команда. Это улучшает читаемость кода.</div><br><br>
+
+<div class="HZ">
+    Преобразование к логическому типу
+</div>
+<br><br>
+<div>Инструкция <font class="font">if (…)</font> вычисляет выражение в скобках и преобразует результат к логическому типу.
+<br>
+Давайте вспомним правила преобразования типов из главы <a class="aInText" href="">Преобразование типов</a>:</div>
+
+<ul>
+    <li>Число <font class="font">0</font>, пустая строка <font class="font">""</font>, <font class="font">null</font>, <font class="font">undefined</font> и <font class="font">NaN</font> становятся <font class="font">false</font>. Из-за этого их называют «ложными» («falsy») значениями.</li>
+    <li>Остальные значения становятся <font class="font">true</font>, поэтому их называют «правдивыми» («truthy»).</li>
+
+</ul>
+<br>
+<br>
+
+
+<div class="HZ">Блок «else»</div>
+<br><br>
+<div>Инструкция <font class="font">if</font> может содержать необязательный блок «else» («иначе»). Он выполняется, когда условие ложно.</div>
+<br>
+<div>Например:</div>
+
+
+
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-js" style="text-shadow: none; ">
+let year = prompt('В каком году была опубликована спецификация ECMAScript-2015?', '');
+
+if (year == 2015) {
+alert( 'Да вы знаток!' );
+} else {
+alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+}
+                                        </code></pre>
+
+
+
+
+    <br><br>
+    <div class="test" style="margin-top: 70px; line-height: 25px; color: white;" >
+
+        <script>
+            // Заголовок страницы (h2)
+            var title = 'Срез по теме "JavaScript"';
+        
+            // Это ваши вопросы
+            var questions=[
+                {
+                    text: "Что такое JavaScript?",
+                    answers: 
+                        ["JavaScript – это язык программирования, который используют разработчики для создания интерактивных веб-страниц.",
+                        "Исскуственный интеллект, предназначенный для поиска нужных вам сериалов",
+                        "Программное обеспечение для доступа к сайтам"],
+                    correctAnswer: 0 // нумерация ответов с нуля!
+                },
+                {
+                    text: "Как называется оператор <<если>>",
+                    answers: 
+                        ["If",
+                        "While",
+                        "For"],
+                    correctAnswer: 0
+                },
+                {
+                    text: "Что делает функция alert? ",
+                    answers: 
+                        ["Задает вам вопросы",
+                        "Она готовит ужин",
+                        "Она показывает сообщение и ждёт, пока пользователь нажмёт кнопку «ОК»"],
+                    correctAnswer: 2
+                },
+                {
+                    text: "Что такое функция prompt?",
+                    answers: 
+                            ["Функция, просящая от вас ввода",
+                            "Программное обеспечение для доступа к сайтам", 
+                            "что то на немецком"],
+                    correctAnswer: 0
+                },
+                {
+                    text: "Как вызвать JS в html коде?",
+                    answers: 
+                        ["С помощью молитв", 
+                        "С помощью тега script", 
+                        "С помощью css"],
+                    correctAnswer: 1
+                }
+            ];
+        
+            var yourAns = new Array;
+            var score = 0;
+        
+            function Engine(question, answer) {
+                yourAns[question] = answer;
+            }
+        
+            function Score() {
+                for (var i = 0; i < yourAns.length; ++i) {
+                    if (yourAns[i] == questions[i].correctAnswer) {
+                        ++score;
+                    }
+                }
+        
+                alert("Всего правильных ответов: " + score + " из 5");
+                yourAns = [];
+                score = 0;
+                clearForm("quiz");
+            }
+        
+            function clearForm(name) {
+                var f = document.forms[name];
+                for (var i = 0; i < f.elements.length; ++i) {
+                    if (f.elements[i].checked)
+                        f.elements[i].checked = false;
+                }
+            }
+        </script>
+        
+        <h2><script>document.write(title)</script></h2>
+        <h3><script>document.write(subtitle)</script></h3>
+        
+        <form name="quiz">
+            <ol>
+                <script>
+                    for(var q=0; q<questions.length; ++q) {
+                        var question = questions[q];
+                        var idx = 1 + q;
+        
+                        document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                        for(var i in question.answers) {
+                            document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                                '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                        }
+                        document.writeln('</li>');
+                    }
+                </script>
+            </ol>
+            <br>
+            <input class="input" type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px	">
+        </form>
+        </div>
+  
+
+  
+</div>
+</div>
+
+ 
+  
+
+
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Prism.highlightAll();
+    });
+</script>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer">
+	<div class="futer_logo"> 
+		<hr class="cherta"><div class="logo1"><font color="orange" ><\> Html</font>School</div><hr class="cherta">
+	</div>
+	<div class="footer2">
+			<div class="our_place">Нижнекамск, пр-т Химиков 29
+            </div>
+            <div class="data">2024 © Все права защищены 
+			<p>ЛЮБАЯ ИНФОРМАЦИЯ, ПРЕДСТАВЛЕННАЯ НА ДАННОМ САЙТЕ, НОСИТ ИСКЛЮЧИТЕЛЬНО ИНФОРМАЦИОННЫЙ ХАРАКТЕР И НИ ПРИ КАКИХ УСЛОВИЯХ НЕ ЯВЛЯЕТСЯ ПУБЛИЧНОЙ ОФЕРТОЙ, ОПРЕДЕЛЯЕМОЙ ПОЛОЖЕНИЯМИ СТАТЬИ 437 ГК РФ.</p></div>
+			
+	</div>
+</body>
+</html>
