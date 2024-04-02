@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="semantica_style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Prism.highlightAll();
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>    
+</head>
+<body>
+ 
+
+
+
+
+<div class="cont">
+	<hr class="cherta"></hr>
+	<p>Целью тегов HTML является передача смысла документу. Не беспокойтесь о том, как ваша веб-страница выглядит. Сосредоточьтесь на значении каждого тега, который вы будете использовать. В зависимости от написанного вами содержимого, вы можете выбрать подходящий элемент, соответствующий смыслу текста. Диапазон элементов достаточно широк, чтобы он подходил и для материалов общего назначения (например, абзацы или списки) и для более конкретного содержимого, вроде <b style="color: orange;">&ltoutput></b> (для отображения результата вычисления) или <b style="color: orange;">&ltprogress></b> (для отображения хода выполнения задачи).</p>
+    <h2>Структурные элементы: организация страницы</h2>
+    <p>Структурные элементы позволяют организовать основные части вашей страницы. Они обычно содержат другие элементы HTML. Вот что типичная веб-страница может в себя включать:</p>
+    <ul>
+        <li><b>&ltheader></b> в качестве первого элемента страницы, который может включать в себя логотип и слоган;</li>
+        <li><b>&ltnav></b> в качестве списка ссылок, которые ведут на разные страницы сайта;</li>
+        <li><b>&lth1></b> в качестве заголовка страницы;</li>
+        <li><b>&ltarticle></b> в качестве основного содержимого страницы, вроде статьи блога;</li>
+        <li><b>&ltfooter></b> в качестве последнего элемента страницы, расположенного внизу.</li>
+    </ul>
+    <h2>Текстовые элементы: определение контента</h2>
+    <p>Внутри структурных элементов вы обычно находите текстовые элементы, призванные определить цель вашего содержимого. Вы, в основном, будете использовать:</p>
+    <ul>
+        <li><b>&ltp></b> для абзацев;</li>
+        <li><b>&ltul></b> для (неупорядоченных) списков;</li>
+        <li><b>&ltol></b> для (упорядоченных) списков;</li>
+        <li><b>&ltli></b> для отдельных пунктов списка;</li>
+        <li><b>&ltblockquote></b> для цитат.</li>
+    </ul>
+    <h2>Строчные элементы: различный текст</h2>
+    <p>Поскольку текстовые элементы могут быть длинными, но с разным содержанием, строчные элементы позволяют различать части текста. Есть много строчных элементов, но вы обычно столкнётесь со следующими:</p>
+    <ul>
+        <li><b>&ltstrong> </b> для важных слов;</li>
+        <li><b>&ltem> </b> для выделенных слов;</li>
+        <li><b>&lta> </b> для ссылок;</li>
+        <li><b>&ltsmall> </b> для менее важных слов;</li>
+        <li><b>&ltabbr> </b> для аббревиатур, вроде W3C.</li>
+    </ul>
+    <p>Просто читая этот код HTML, вы можете легко понять, что означает каждый элемент HTML.</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+  <code class="language-html" style="text-shadow: none; ">&ltarticle>
+      &lth1>Основной заголовок страницы&lt/h1>
+      &lth2>Подзаголовок&lt/h2>
+      &ltp>
+        Какие-то всякие разные штуки и некоторые &ltem>выделенные&lt/em> и 
+        даже &ltstrong>важные&lt/strong> слова.
+      &lt/p>
+      &ltp>
+        Другой абзац.
+      &lt/p>
+      &ltul>
+        &ltli>Один&lt/li>
+        &ltli>Два&lt/li>
+        &ltli>Три&lt/li>
+      &lt/ul>
+      &ltblockquote>
+        Однажды сказано
+      &lt/blockquote>
+    &lt/article>
+    &ltaside>
+      &lth3>Мои последние сообщения&lt/h3>
+      &ltul>
+         &ltli>&lta href="#">Один&lt/a>&lt/li>
+         &ltli>&lta href="#">Два&lt/a>&lt/li>
+         &ltli>&lta href="#">Три&lt/a>&lt/li>
+      &lt/ul>
+   &lt/aside></code></pre>
+   <h2>Общие элементы</h2>
+   <p>Когда ни один семантический элемент не подходит для вашего содержимого, но вы всё ещё хотите вставить элемент HTML (в целях группирования или стилизации), то можете остановиться на одном из двух общих элементов:</p>
+   <ul>
+       <li><b>&ltdiv></b> для блочных элементов;</li>
+       <li><b>&ltspan></b> для строчных элементов.</li>
+   </ul>
+   <p>Хотя эти элементы HTML на самом деле не несут какого-либо смысла, они пригодятся когда мы начнём использовать CSS.</p>
+   <h2>Не заморачивайтесь на семантике</h2>
+   <p>Существует около <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" style="color:lightblue;">100 семантических элементов</a> HTML на выбор. Это много. Может оказаться непреодолимым пройтись по этому списку и выбрать соответствующий элемент для вашего контента. Но не тратьте слишком много времени, беспокоясь об этом. Если вы будете придерживаться следующего списка на данный момент, этого будет достаточно:</p>
+   <table>
+       <tr style="background-color: #2b3e50;">
+           <th>Структурные</th>
+           <th>Текстовые</th>
+           <th>Строчные</th>
+       </tr>
+       <tr>
+           <td>&ltheader></td>
+           <td>&ltp></td>
+           <td>&lta></td>
+       </tr>
+       <tr style="background-color: #2b3e50;">
+           <td>&lth1></td>
+           <td>&ltul></td>
+           <td>&ltstrong></td>
+       </tr>
+       <tr>
+           <td>&lth2></td>
+           <td>&ltol></td>
+           <td>&ltem></td>
+       </tr>
+       <tr style="background-color: #2b3e50;">
+           <td>&lth3></td>
+           <td>&ltli></td>
+           <td>&ltq></td>
+       </tr>
+       <tr>
+           <td>&ltnav></td>
+           <td>&ltblockquote></td>
+           <td>&ltabbr></td>
+       </tr>
+       <tr style="background-color: #2b3e50;">
+           <td>&ltfooter></td>
+           <td></td>
+           <td>&ltsmall></td>
+       </tr>
+       <tr>
+           <td>&ltarticle></td>
+           <td></td>
+           <td></td>
+       </tr>
+       <tr style="background-color: #2b3e50;">
+           <td>&ltsection></td>
+           <td></td>
+           <td></td>
+       </tr>
+
+   </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+    <script>
+        // Заголовок страницы (h2)
+        var title = 'Срез по теме "Семантика HTML"';
+
+        // Это ваши вопросы
+        var questions = [
+            {
+                text: "Какой HTML тег используется для создания абзацев?",
+                answers: [
+                	"&ltdiv>",
+                	"&ltp>",
+                	"&ltspan>"],
+                correctAnswer: 1
+            },
+            {
+                text: "Какой HTML тег используется для выделения важных слов?",
+                answers: [
+                	"&ltem>",
+                	"&ltstrong>",
+                	"&ltsmall>"],
+                correctAnswer: 1
+            },
+            {
+                text: "Какой HTML тег предназначен для создания списка ссылок?",
+                answers: [
+                	"&ltnav>",
+                	 "&ltul>",
+                	 "&ltfooter>"],
+                correctAnswer: 0
+            }
+        ];
+
+        var yourAns = new Array;
+        var score = 0;
+
+        function Engine(question, answer) {
+            yourAns[question] = answer;
+        }
+
+        function Score() {
+            for (var i = 0; i < yourAns.length; ++i) {
+                if (yourAns[i] == questions[i].correctAnswer) {
+                    ++score;
+                }
+            }
+
+            alert("Всего правильных ответов: " + score + " из 3");
+            yourAns = [];
+            score = 0;
+            clearForm("quiz");
+        }
+
+        function clearForm(name) {
+            var f = document.forms[name];
+            for (var i = 0; i < f.elements.length; ++i) {
+                if (f.elements[i].checked)
+                    f.elements[i].checked = false;
+            }
+        }
+    </script>
+
+    <h2><script>document.write(title)</script></h2>
+
+    <form name="quiz">
+        <ol>
+            <script>
+                for(var q=0; q<questions.length; ++q) {
+                    var question = questions[q];
+                    var idx = 1 + q;
+
+                    document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                    for(var i in question.answers) {
+                        document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                    }
+                    document.writeln('</li>');
+                }
+            </script>
+        </ol>
+        <br>
+        <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px ">
+    </form>
+</div>
+</div>
+
+</body>
+</html>

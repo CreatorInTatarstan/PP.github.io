@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="what_is_html_style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Prism.highlightAll();
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>    
+</head>
+<body>
+ 
+
+
+
+
+<div class="cont">
+	<hr class="cherta"></hr>
+	<p>HTML язык по своей сути не является языком программирования.. он является языком
+разметки гипертекстовых документов. Иными словами он отвечает за расположение в документе
+Ваших текстов, рисунков, таблиц.. предназначенных для жизни в сети Интернет. Заставить его
+посчитать, сколько будет дважды два невозможно, в нем нет логических функций, зато красиво и
+главное легко выложить информацию о том, что дважды два будет четыре - это запросто.
+Читается этот язык при помощи знакомых Вам программ, именуемых браузерами
+(обозревателями), которые "знают" стандартные команды html языка, и "пережевывая" их
+выводят на монитор компьютера документы в том виде, в котором хочет представить их веб
+мастер - составитель документа.
+</p>
+	<p>Теперь о командах - их называют дескрипторами, но чаще - тегами.</p>
+	<p>Вернемся к нашей первой страничке.. итак мы написали:</p>
+
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; ">&lt;html>
+            &lt;head>
+                &lt;title>Моя HTML-страница&lt;/title>
+            &lt;/head>
+            &lt;body>
+                &lt;h1>Привет, мир!&lt;/h1>
+            &lt;/body>
+      &lt;/html></code></pre>    	
+
+
+
+<p>Так вот то что написано между <b style="color: orange;"><…></b> - называют тегами они не видны читателю,
+заглянувшему на Вашу страницу, зато хорошо видны браузеру, который наткнувшись на тег
+<b style="color: orange;">&lthtml></b> понимает его как сигнал к тому, что далее будет документ, который необходимо
+прочитать и вывести на монитор в нужном виде. А вот тег <b style="color: orange;">&lt/html></b> говорит о том что документ
+закончился и от него, то бишь браузера, больше ничего не требуется и он может отдыхать с
+чистой совестью.
+</p>
+<h2>Необходимо запомнить</h2>
+<p style="margin-left: 20px;">1) Необходимо раз и навсегда запомнить что если есть открывающий тег <b style="color: orange;"><…></b> то обязательно
+должен быть и закрывающий <b style="color: orange;"></…></b>
+</p>
+<p>Хотя есть и исключения как например тег <b style="color:orange;">&ltbr></b> - он закрытия не требует потому что
+говорит лишь о том, что следует писать с новой строки.</p>
+<p style="margin-left:20px">2) Все документы должны иметь вот такой шаблон кода:</p>
+
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; ">&lt;html> - начало документа
+            &lt;head> - начало головы
+            &lt;/head> - закрытие головы
+            &lt;body> - начало тела
+            &lt;/body> - закрытие тела
+      &lt;/html> - конец документа </code></pre>  
+
+
+<p>Данные теги являются обязательными! Писать их необходимо всегда для каждой новой
+странички, и только в таком порядке! Не пытайтесь перевернуть всё с ног на голову.</p>
+<p style="margin-left:20px">3) О порядке:</p>
+<p>Открывающий и закрывающий тег по типу <b style="color:orange;"><…> &lt/…></b> представляет собой своего рода
+ёмкость, ящик в который могут складываться другие теги - ящички поменьше.. следовательно,
+согласно логики документ должен выглядеть так:
+</p>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; "><Тег "большой ящик">
+ 			<Тег "ящик средний">
+ 				<Тег "ящик маленький">
+ 					содержание
+ 				&lt/Тег "ящик маленький" >
+ 			&lt/Тег "ящик средний" >
+	  &lt/Тег "большой ящик"></code></pre>
+
+<h2>Полезные советы:</h2>
+
+<ul>
+    <li>При написании сайта создайте папку в любом удобном месте на Вашем жёстком диске,
+называйте как угодно, лишь бы понятно было. В эту папку сохраняете Ваши странички,
+присваивая им осмысленные имена. Варианты типа ааа.html, 123.html приведут к беспорядку и
+путанице… На данном этапе этот совет не покажется дельным, но в дальнейшем это значительно
+облегчит Ваш труд. Представьте к примеру хотя бы 20-30 таких файлов названия которых нужно
+держать в голове, чтобы связать их перекрёстными ссылками. Порядок, прежде всего! </li>
+    <li>При написании кода советую придерживаться "хорошей манере письма", то есть писать
+теги "лесенкой" по мере вложенности одного тега в другой. Со временем Вы поймете, что читать
+код написанный вот так:</li>
+</ul>
+
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; ">&lthtml>
+ 			&lthead>
+ 				&lttitle>Моя первая страничка&lt/title>
+ 			&lt/head>
+ 			&ltbody>
+ 				Привет мир!!!
+ 				&ltbr>
+ 				Меня зовут Карлсон, это моя первая страничка!
+ 			&lt/body>
+	  &lt/html></code></pre>
+<p>Значительно легче, чем так:</p>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; ">&lthtml>
+ 	  &lthead>
+ 	  &lttitle>Моя первая страничка&lt/title>
+ 	  &lt/head>
+ 	  &ltbody>
+ 	  Привет мир!!!
+ 	  &ltbr>
+ 	  Меня зовут Карлсон, это моя первая страничка!
+ 	  &lt/body>
+	  &lt/html></code></pre>
+<p>И уж тем более чем вот так:</p>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+    <code class="language-html" style="text-shadow: none; ">&lthtml>&lthead>&lttitle>Моя первая страничка&lt/title>&lt/head>&ltbody>Привет мир!!!&ltbr>
+      Меня зовут Карлсон, это моя первая страничка!&lt/body>&lt/html></code>
+</pre>
+<p>Хоть это и дело привычки.. всё же лучше привыкнуть писать "разборчиво".</p>
+
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+    <script>
+        // Заголовок страницы (h2)
+        var title = 'Срез по теме "Что такое HTML?"';
+
+        // Это ваши вопросы
+        var questions = [
+            {
+                text: "В чем состоит основное назначение языка HTML?",
+                answers: [
+                	"Написание сложных программ",
+                	"Работа с базами данных",
+                	"Разметка гипертекстовых документов"],
+                correctAnswer: 2
+            },
+            {
+                text: "Какой правильный порядок тегов в HTML документе?",
+                answers: [
+                	"&ltbody>, &lthead>, &lthtml>",
+                	"&lthtml>, &ltbody>, &lthead>",
+                	"&lthtml>, &lthead>, &ltbody>"],
+                correctAnswer: 2
+            },
+            {
+                text: "Что представляет собой открывающий и закрывающий тег в HTML?",
+                answers: [
+                	"Они не обязательны в HTML",
+                	 "Они являются ёмкостями для других тегов",
+                	 "Они используются только для стилей и цветов"],
+                correctAnswer: 1
+            }
+        ];
+
+        var yourAns = new Array;
+        var score = 0;
+
+        function Engine(question, answer) {
+            yourAns[question] = answer;
+        }
+
+        function Score() {
+            for (var i = 0; i < yourAns.length; ++i) {
+                if (yourAns[i] == questions[i].correctAnswer) {
+                    ++score;
+                }
+            }
+
+            alert("Всего правильных ответов: " + score + " из 3");
+            yourAns = [];
+            score = 0;
+            clearForm("quiz");
+        }
+
+        function clearForm(name) {
+            var f = document.forms[name];
+            for (var i = 0; i < f.elements.length; ++i) {
+                if (f.elements[i].checked)
+                    f.elements[i].checked = false;
+            }
+        }
+    </script>
+
+    <h2><script>document.write(title)</script></h2>
+
+    <form name="quiz">
+        <ol>
+            <script>
+                for(var q=0; q<questions.length; ++q) {
+                    var question = questions[q];
+                    var idx = 1 + q;
+
+                    document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                    for(var i in question.answers) {
+                        document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                    }
+                    document.writeln('</li>');
+                }
+            </script>
+        </ol>
+        <br>
+        <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px ">
+    </form>
+</div>
+</div>
+
+</body>
+</html>

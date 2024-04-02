@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="sintacsis_style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+             Prism.highlightAll();
+        });
+    </script>
+
+</head>
+<body>
+
+
+
+
+<div class="cont">
+    <hr class="cherta"></hr>
+    <h2>Атрибуты</h2>
+    <p>Атрибуты действуют как <b>дополнительная</b> информация, привязанная к элементу HTML. Они пишутся внутри тега HTML. Таким образом, они также не отображаются в браузере.</p>
+    <p>Например, атрибут <b>href</b> используется для определения назначения ссылки (которая создаётся тегом &lta>):</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&lta href="http://www.mozilla.com/firefox">Скачать Firefox&lt/a></code></pre>
+    <p>Есть <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" style="color:lightblue;">16 атрибутов HTML</a>, которые могут быть использованы в любом элементе HTML. Все они не являются обязательными.</p>
+    <p>Вы в основном будете применять <b>class</b> (который используется для CSS) и <b>title</b> (подсказка, которая появляется при наведении курсора на объект, вроде этого).</p>
+    <p>Некоторые элементы HTML содержат обязательные атрибуты. Например, при вставке изображения вы должны указать его расположение с помощью атрибута <b>src</b>:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltimg src="#" alt="Описание изображения"></code></pre>
+    <p>Принимая во внимание, что цель элемента <img> заключается в показе изображения, то имеет смысл путь к изображению сделать обязательным.</p>
+    <h2>Комментарии</h2>
+    <p>Если вы пишете что-то в своём коде без нарушения отображения страницы браузером, то вы можете писать комментарии. Они будут игнорироваться браузером и могут быть использованы только для людей, которые пишут код.</p>
+    <p>Комментарий начинается с <b>&lt!--</b> и заканчивается <b>--></b></p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&lt!-- Это предложение будет игнорироваться браузером -->
+  &ltp>Привет, мир!&lt/p></code></pre>
+    <h2>Самозакрывающиеся элементы</h2>
+    <p>Некоторые элементы HTML имеют только открывающий тег:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltbr> &lt!-- Перевод строки -->
+  &ltimg src="http://placehold.it/50x50" alt="Описание"> &lt!-- изображение -->
+  &ltinput type="text"> &lt!-- текстовое поле --></code></pre>
+    <p>Поскольку у них нет закрывающего тега и, следовательно, они не могут содержать ничего внутри, самозакрывающие элементы обычно несут с собой несколько атрибутов, которые предоставляют дополнительную информацию.</p>
+    <h2>Используйте имена элементов в нижнем регистре</h2>
+    <p>HTML позволяет смешивать прописные и строчные буквы в именах элементов</p>
+    <p>Однако мы рекомендуем использовать имена элементов в нижнем регистре, поскольку:</p>
+    <ul>
+        <li>Смешивание прописных и строчных имен выглядит плохо</li>
+        <li>Разработчики обычно используют имена в нижнем регистре</li>
+        <li>Нижний регистр выглядит чище</li>
+        <li>Строчные буквы писать проще</li>
+    </ul>
+    <p>Хорошо:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltbody>
+      &ltp>Это параграф&lt/p>
+  &lt/body></code></pre>
+    <p>Плохо:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltBODY>
+      &ltP>Это параграф&lt/P>
+  &lt/BODY></code></pre>
+    <h2>Пустые строки и отступы</h2>
+    <p>Не добавляйте пустые строки, пробелы или отступы без причины.
+    <p>Для удобства чтения добавьте пустые строки для разделения больших или логических блоков кода.</p>
+    <p>Для удобства чтения добавьте два интервала отступа. Не используйте клавишу tab.</p></p>
+    <h2>Настройка видового экрана</h2>
+    <p>Видовой экран - это видимая область веб страницы пользователя. Она меняется в зависимости от устройства - на мобильном телефоне она будет меньше, чем на экране компьютера.</p>
+    <p>Вы должны включить следующей элемент <b>&ltmeta></b> на всех ваших веб страницах:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"></code></pre>
+    <p>Это дает браузеру инструкции по управлению размерами и масштабированием страницы.</p>
+    <p>Часть width=device-width задает ширину страницы, соответствующую ширине экрана устройства (которая будет варьироваться в зависимости от устройства).</p>
+    <p>Часть initial-scale=1.0 устанавливает начальный уровень масштабирования при первой загрузке страницы браузером.</p>  
+
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+    <script>
+        // Заголовок страницы (h2)
+        var title = 'Срез по теме "Синтаксис HTML"';
+
+        // Это ваши вопросы
+        var questions = [
+            {
+                text: "Что выполняют комментарии в HTML коде?",
+                answers: [
+                    "Влияют на стиль элементов",
+                    "Игнорируются браузером и предназначены для разработчиков",
+                    "Отображаются на веб-странице"
+                	],
+                correctAnswer: 1
+            },
+            {
+                text: "Какой атрибут используется для определения назначения ссылки в HTML?",
+                answers: [
+                    "class",
+                    "title",
+                    "href",
+                	],
+                correctAnswer: 2
+            },
+            {
+                text: "Какие элементы в HTML являются самозакрывающимися и не содержат закрывающего тега?",
+                answers: [
+                	"&ltdiv>",
+                    "&ltimg>",
+                    "&ltp>",
+                    ],
+                correctAnswer: 1
+            }
+        ];
+
+        var yourAns = new Array;
+        var score = 0;
+
+        function Engine(question, answer) {
+            yourAns[question] = answer;
+        }
+
+        function Score() {
+            for (var i = 0; i < yourAns.length; ++i) {
+                if (yourAns[i] == questions[i].correctAnswer) {
+                    ++score;
+                }
+            }
+
+            alert("Всего правильных ответов: " + score + " из 3");
+            yourAns = [];
+            score = 0;
+            clearForm("quiz");
+        }
+
+        function clearForm(name) {
+            var f = document.forms[name];
+            for (var i = 0; i < f.elements.length; ++i) {
+                if (f.elements[i].checked)
+                    f.elements[i].checked = false;
+            }
+        }
+    </script>
+
+    <h2><script>document.write(title)</script></h2>
+
+    <form name="quiz">
+        <ol>
+            <script>
+                for(var q=0; q<questions.length; ++q) {
+                    var question = questions[q];
+                    var idx = 1 + q;
+
+                    document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                    for(var i in question.answers) {
+                        document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                    }
+                    document.writeln('</li>');
+                }
+            </script>
+        </ol>
+        <br>
+        <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px ">
+    </form>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="text_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+             Prism.highlightAll();
+        });
+    </script>
+
+</head>
+<body>
+
+
+
+
+<div class="cont">
+    <hr class="cherta"></hr>
+    <h2>Параграф</h2>
+    <p>Параграф - это такой кусочек текста, одно или несколько
+предложений, который в книгах обычно печатается с новой строки, тем самым, выделяя этот
+текст из основной массы, Книгу разбитую на параграфы легко читать, потому что, как правило,
+одному параграфу соответствует одна мысль или логическая часть текста.</p>
+    <p>Так вот, для того чтобы на странице сайта разбить текст на параграфы, необходимо
+воспользоваться тегом <b style="color: orange;">&ltp></b> - собственно параграф.</p>
+    <p>Параграф имеет атрибут <b style="color: orange;">align</b> "выравнивание" который в свою очередь может быть равен
+тому ли иному значению.</p>
+    <p>С помощью параграфа можно расположить наш текст по центру:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltp align="center">Привет мир!!!&lt/p></code></pre>
+    <p>По левому краю:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltp align="left">Привет мир!!!&lt/p></code></pre>
+    <p>По правому краю:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltp align="right">Привет мир!!!&lt/p></code></pre>
+    <p>Или же обоим краям документа:</p>    
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltp align="justify">Привет мир!!! - здесь нужен текст подлиней чтобы эффект 
+      был хорошо виден при открытии документа&lt/p></code></pre>
+    <p>Запомним некоторые вещи:</p>
+    <p>1) Тег <b style="color:orange;">&ltp></b> не может содержать в себе других параграфов, то есть писать вот так:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltp>
+          &ltp>
+          &lt/p>
+      &lt/p></code></pre>
+    <p>2) Так же, нельзя писать пустые теги без текста или других тегов.</p>
+    <p>3) По умолчанию Ваш текст выравнивается браузером по левому краю, так что если Вам так
+и надо атрибут <b style="color: orange;">align="left"</b> для параграфа можно не указывать.</p>
+    <p>4) Тег <b style="color:orange;">&ltp></b> подразумевает в себе перенос строки, если это Вам не нужно, используйте вместо тега <b style="color:orange;">&ltp></b> тег <b style="color:orange;">&ltdiv></b> данный тег является альтернативой тегу <b style="color:orange;">&ltp></b></p>
+    <p>5) Еще одним способом выравнивания текста по центру является использование тега
+<b style="color:orange;">&ltcenter></b> любое содержание взятое в данный тег выравнивается по центру экрана. Пишется так:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltcenter>Привет мир!!!&lt/center></code></pre>
+    <h2>Заголовки</h2>
+    <p>В наборе тегов html языка имеется шесть типов заголовков:</p>
+    <h1 style="text-align: left;">&lth1> Привет мир!!! &lt/h1></h1>
+    <h2>&lth2> Привет мир!!! &lt/h2></h2>
+    <h3>&lth2> Привет мир!!! &lt/h2></h3>
+    <h4>&lth4> Привет мир!!! &lt/h4></h4>
+    <h5>&lth5> Привет мир!!! &lt/h5></h5>
+    <h6>&lth6> Привет мир!!! &lt/h6></h6>
+    <p><b style="color:orange;">&lthx></b> тег заголовка, где значение <b style="color:orange;">x</b> является величиной буковок
+(может быть от одного до шести). Помните, что после использования того или иного заголовка
+происходит перенос строки - на то он и заголовок.</p>
+    <h2>Цвет</h2>
+    <p>Для придания страничке красивого вида не обойтись без палитры с красками. В html языке используется своя палитра красок. <br> <a href="https://colorscheme.ru/html-colors.html" style="color:lightblue;">Полная палитра базовых красок</a></p>
+    <p>Один и тот же цвет можно задать двумя способами: используя шестнадцатеричное значение цвета RGB - например <b style="color:orange;">#008000</b> - зелёный цвет, либо
+используя константы цвета - <b style="color:orange;">green</b> (для тех кто учил французский, <b style="color:orange;">green</b> -зелёный.)</p>
+    <p>Мы уже знакомы с тегом <b style="color:orange;">&ltfont></b> у него есть еще один атрибут - <b style="color:orange;">color</b>. Так вот, если к примеру написать так:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltfont color="#ff0000">Привет мир!!!&lt/font></code></pre>
+    <p>В строчке, где стоит открывающий тег <b style="color:orange;">&ltbody></b> пишем так:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltbody text="#ff8c40 "></code></pre>
+    <h2>Стиль текста</h2>
+    <p>Здесь все достаточно просто. Новые теги:</p>
+    <table>
+        <tr>
+            <td>&ltb>&lt/b></td>
+            <td><b>- Полужирный текст</b></td>
+        </tr>
+        <tr style="background-color: #2b3e50;">
+            <td>&lti>&lt/i></td>
+            <td><i>- Наклонный текст</i></td>
+        </tr>
+        <tr>
+            <td>&ltu>&lt/u></td>
+            <td><u>- Подчеркнутый текст</u></td>
+        </tr>
+        <tr style="background-color: #2b3e50;">
+            <td>&lts>&lt/s></td>
+            <td><s>- Перечеркнутый</s></td>
+        </tr>
+        <tr>
+            <td>&lttt>&lt/tt></td>
+            <td><tt>- моноширинный шрифт</tt></td>
+        </tr>
+        <tr style="background-color: #2b3e50;">
+            <td>&ltsmall>&lt/small></td>
+            <td><small>- Малый</small></td>
+        </tr>
+        <tr>
+            <td>&ltbig>&lt/big></td>
+            <td><big>- Большой</big></td>
+        </tr>
+        <tr style="background-color: #2b3e50;">
+            <td>&ltsup>&lt/sup></td>
+            <td>- Верхний <sup>индекс</sup></td>
+        </tr>
+        <tr>
+            <td>&ltsub>&lt/sub></td>
+            <td>- Нижний <sub>индекс</sub></td>
+        </tr>
+    </table>
+    <h2>Шрифт</h2>
+    <p>Для того чтобы изменить шрифт документа необходимо дать указание браузеру, что от
+этого до этого места показывать текст таким шрифтом. Для этого используем всё тот же тег <b style="color:orange;">&ltfont></b> и его
+атрибут <b style="color:orange;">face</b> - лицо то есть.</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+    <code class="language-html" style="text-shadow: none;">&ltfont face="arial">Эта строчка будет написана с помощью шрифта Arial&lt/font></code></pre>
+    <p>Здесь необходимо отметить, что браузер использует библиотеку шрифтов, установленную на
+компьютере пользователя, и если вдруг указанного Вами шрифта в этой библиотеке не окажется,
+то он заменит его на тот который присутствует. Следовательно, чтобы не ударить в грязь лицом, не стоит указывать какие-то "экзотические" нестандартные шрифты, так как супер модный
+шрифт на компьютере Вашего друга сильно рискует превратиться в обыкновенный.
+</p>
+
+
+
+
+
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+
+<script>
+    // Заголовок страницы (h2)
+    var title = 'Срез по теме "Редактируем текст на своей странице"';
+
+    // Это ваши вопросы
+    var questions=[
+        {
+            text: "Что такое тег &ltp> в HTML?",
+            answers: 
+                ["Тег для создания таблицы",
+                "Тег для создания списка",
+                "Тег для создания параграфа"],
+            correctAnswer: 2 // нумерация ответов с нуля!
+        },
+        {
+            text: "Какой атрибут HTML тега &ltp> используется для выравнивания текста?",
+            answers: 
+                ["style",
+                "align",
+                "format"],
+            correctAnswer: 1
+        },
+        {
+            text: "Какой тег подразумевает в себе перенос строки по умолчанию? ",
+            answers:
+                ["&ltp>",
+                "&ltbr>",
+                "&ltdiv>"],
+            correctAnswer: 0
+        },
+        {
+            text: "Как можно задать цвет текста с помощью HTML?",
+            answers: 
+                    ["Атрибут color у тега &ltfont>",
+                    "Атрибут background-color у тега &ltbody>", 
+                    "Атрибут text-color у тега &ltp>"],
+            correctAnswer: 0
+        },
+        {
+            text: "Какой тег используется для изменения шрифта текста в HTML?",
+            answers: 
+                ["&ltstyle>", 
+                "&ltfont>", 
+                "&lttext>"],
+            correctAnswer: 1
+        }
+    ];
+
+    var yourAns = new Array;
+    var score = 0;
+
+    function Engine(question, answer) {
+        yourAns[question] = answer;
+    }
+
+    function Score() {
+        for (var i = 0; i < yourAns.length; ++i) {
+            if (yourAns[i] == questions[i].correctAnswer) {
+                ++score;
+            }
+        }
+
+        alert("Всего правильных ответов: " + score + " из 5");
+        yourAns = [];
+        score = 0;
+        clearForm("quiz");
+    }
+
+    function clearForm(name) {
+        var f = document.forms[name];
+        for (var i = 0; i < f.elements.length; ++i) {
+            if (f.elements[i].checked)
+                f.elements[i].checked = false;
+        }
+    }
+</script>
+
+<h2><script>document.write(title)</script></h2>
+<h3><script>document.write(subtitle)</script></h3>
+
+<form name="quiz">
+    <ol>
+        <script>
+            for(var q=0; q<questions.length; ++q) {
+                var question = questions[q];
+                var idx = 1 + q;
+
+                document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                for(var i in question.answers) {
+                    document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                        '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                }
+                document.writeln('</li>');
+            }
+        </script>
+    </ol>
+    <br>
+    <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px  ">
+</form>
+</div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

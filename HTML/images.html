@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="images_style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Prism.highlightAll();
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>    
+</head>
+<body>
+ 
+
+
+
+
+<div class="cont">
+	<hr class="cherta"></hr>
+	<h2>Путь к файлу  </h2>
+    <p>Итак, допустим Вы пишете сайт о себе и хотите вставить в него свою фотографию. Есть у Вас значит фотография, которая где-то лежит на Вашем жёстком диске. Kопируем ёе и вставляем в ту папку (директорию) где уже лежит заготовка будущей страницы, то есть туда же, куда сохраняете блокнотом html документ. Так, вот для того чтобы теперь вставить её в нашу страничку к ней нужно указать путь, делается это так:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+  <code class="language-html" style="text-shadow: none; ">&ltimg src="foto.jpg">
+</code></pre>
+    <p>Где <b>foto.jpg</b> это название Вашей фотографии в данном случае, так как фото лежит рядом с html документом, путь к ней мы не указываем. Да, помните, тег <b>&ltimg></b> не требует закрывающего тега!</p>
+    <p>Теперь приведу ряд примеров где путь указывается:</p>
+    <b>&ltimg src="myfoto/foto.jpg"></b> - Такая запись подразумевает, что в директории где расположен наш html документ есть папка myfoto в которой расположен файл foto.jpg<br>
+     <b>&ltimg src="myfoto/graphics/foto.jpg"></b> - Значит рядом с документом расположена папка myfoto, в ней еще одна папка с названием graphics, и уже в ней нужная нам фотография foto.jpg которую нужно выложить для всеобщего обозрения. <br>
+     <b>&ltimg src="../foto.jpg"></b> - А это значит, что фото размещено на уровень выше от документа <br>
+     <b>&ltimg src="../../foto.jpg"></b> - Так соответственно на два уровня выше, сколько поставите../ настолько и поднимитесь.
+     <p>Так же можно указывая место фотографии, ссылаться на тот или иной интернет ресурс
+<b>&ltimg src="http://www.site.ru/foto/foto.jpg"></b></p>
+    <p>Давайте попробуем выложить фото.</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+  <code class="language-html" style="text-shadow: none; ">&lthtml>
+        &lthead>
+            &lttitle>Моя первая страничка с фото&lt/title>
+        &lt/head>
+        &ltbody text="#484800" bgcolor="#e8e8e8">
+            &ltcenter>
+                &lth2> &ltfont color="#008000"> Привет мир!!!&lt/font> &lt/h2>
+            &lt/center>
+            &ltp align="justify">
+                &ltfont size="+1">
+                    &ltimg src="graphics/foto.jpg"> Меня зовут Карлсон! Я в меру 
+                    упитанный мужчина - это моя первая страничка! Здесь я хочу 
+                    найти себе новых друзей, для того чтобы вместе гулять по крышам! 
+                    Я очень очень сильно люблю &ltfont size="+2" color="#ff0000">
+                    вареньё!!!&lt/font> С нетерпеньем буду ждать Вашего приглашения 
+                    на чай. Прилечу!!
+                &lt/font>
+            &lt/p>
+        &lt/body>
+    &lt/html>
+</code></pre>
+    <h2>Атрибуты тега <b>&ltimg></b></h2>
+    <p>Как и другие теги <b>&ltimg></b> тоже имеет свои атрибуты.. уже знакомый нам атрибут <b>align</b>
+"выравнивание" применим и к данному тегу</p>
+    <b>&ltimg src="foto.jpg" align="left"></b> - фото слева от текста  <br>
+    <b>&ltimg src="foto.jpg" align="right"></b> - фото справа от текста <br>
+    <b>&ltimg src="foto.jpg" align="top"></b> - текст выше фото <br>
+    <b>&ltimg src="foto.jpg" align="bottom"></b> - текст ниже фото <br>
+    <b>&ltimg src="foto.jpg" align="middle"></b> - ну и соответственно текст посередине
+    <p style="text-indent: 0px;"><b>&ltimg src="foto.jpg" vspace="15"></b> - Атрибут vspace задаёт расстояние по вертикали от рисунка до текста, в данном случае мы задали расстояние в 15 пикселей  <br>
+    <b>&ltimg src="foto.jpg" hspace="25"></b> - Расстояние по горизонтали соответственно <br>
+    <b>&ltimg src="foto.jpg" width="180"></b> - Ширина непосредственно самого изображения <br>
+    <b>&ltimg src="foto.jpg" height="240"></b> - Высота изображения. Если атрибуты width и height
+не использовать, то ширина и высота изображения по умолчанию будет равна реальным
+её размерам, без каких либо искажений. <br>
+    <b>&ltimg src="foto.jpg" border="5"></b> - Бордюр, рамка вокруг изображения и её толщина в
+пикселях. <br>
+    <b>&ltimg src="foto.jpg" border="5" bordercolor="#008000 "></b> - bordercolor - это цвет рамки. <br>
+    <b>&ltimg src="foto.jpg" alt="Это моя фотка!!!"></b> - Атрибут alt - это описание изображения.
+Если навести курсор на наше фото и подержать его там несколько секунд, выскочит
+надпись -Это моя фотка!!! <br>
+    <b>&ltimg src="foto.jpg" title="Это моя фотка!!!"></b> - альтернатива alt в данном случае.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+    <script>
+        // Заголовок страницы (h2)
+        var title = 'Срез по теме "Картинки"';
+
+        // Это ваши вопросы
+        var questions = [
+            {
+                text: "Как указать путь к файлу foto.jpg, находящемуся в папке myfoto среди файлов документа?",
+                answers: [
+                	"&ltimg src=&quotfoto.jpg&quot>",
+                	"&ltimg src=&quotmyfoto/foto.jpg&quot>",
+                	"&ltimg src=&quot../foto.jpg&quot>"],
+                correctAnswer: 1
+            },
+            {
+                text: "Как задать выравнивание изображения слева от текста с помощью атрибута `align` у тега &ltimg>?",
+                answers: [
+                	"&ltimg src=&quotfoto.jpg&quot align=&quotleft&quot>",
+                	"&ltimg src=&quotfoto.jpg&quot align=&quotright&quot>",
+                	"&ltmg src=&quotfoto.jpg&quot align=&quottop&quot>"],
+                correctAnswer: 0
+            },
+            {
+                text: "Как задать описание изображения, которое будет отображаться всплывающей подсказкой при наведении курсора?",
+                answers: [
+                	"&ltimg src=&quotfoto.jpg&quot alt=&quotЭто моя фотка!!!&quot>",
+                	 "&ltimg src=&quotfoto.jpg&quot title=&quotЭто моя фотка!!!&quot>",
+                	 "&ltimg src=&quotfoto.jpg&quot desc=&quotЭто моя фотка!!!&quot>"],
+                correctAnswer: 0
+            }
+        ];
+
+        var yourAns = new Array;
+        var score = 0;
+
+        function Engine(question, answer) {
+            yourAns[question] = answer;
+        }
+
+        function Score() {
+            for (var i = 0; i < yourAns.length; ++i) {
+                if (yourAns[i] == questions[i].correctAnswer) {
+                    ++score;
+                }
+            }
+
+            alert("Всего правильных ответов: " + score + " из 3");
+            yourAns = [];
+            score = 0;
+            clearForm("quiz");
+        }
+
+        function clearForm(name) {
+            var f = document.forms[name];
+            for (var i = 0; i < f.elements.length; ++i) {
+                if (f.elements[i].checked)
+                    f.elements[i].checked = false;
+            }
+        }
+    </script>
+
+    <h2><script>document.write(title)</script></h2>
+
+    <form name="quiz">
+        <ol>
+            <script>
+                for(var q=0; q<questions.length; ++q) {
+                    var question = questions[q];
+                    var idx = 1 + q;
+
+                    document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                    for(var i in question.answers) {
+                        document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                    }
+                    document.writeln('</li>');
+                }
+            </script>
+        </ol>
+        <br>
+        <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px ">
+    </form>
+</div>
+</div>
+
+</body>
+</html>

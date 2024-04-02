@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="ierarhy_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+             Prism.highlightAll();
+        });
+    </script>
+
+</head>
+<body>
+
+
+
+
+<div class="cont">
+    <hr class="cherta"></hr>
+    <h2>Атрибуты</h2>
+    <p>HTML-документ — это как большое семейное древо, с родителями, братьями, детьми, предками и потомками.</p>
+    <p>Всё это происходит из возможности вкладывать одни элементы HTML внутрь других.</p>
+    <h2>Вложения</h2>
+    <p>Давайте напишем простой абзац и улучшим его путём разделения частей текста, вставив два строчных элемента:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltp>Сэр &ltstrong>Алекс Фергюсон&lt/strong> однажды сказал о Филиппо Индзаги: 
+  &ltq>Этот парень должен был родиться в положении вне игры&lt/q>.&lt/p></code></pre>
+    <p>В этой структуре:</p>
+    <ul>
+        <li>элемент &ltstrong> задаёт слова «Алекс Фергюсон» более важными;</li>
+        <li>&ltq> отмечает его цитату об Индзаги.</li>
+    </ul>
+    
+    <p>Тот факт, что <b>&ltstrong></b> отображается жирным шрифтом, является только поведением браузера по умолчанию. Помните, что вы должны выбирать элементы HTML в соответствии с их значением, а не как они выглядят.</p>
+    <p>В данном случае:</p>
+    <ul>
+        <li><b>&ltp></b> — родительский элемент для <b>&ltstrong></b> и <b>&ltq></b>;</li>
+        <li><b>&ltstrong></b> и <b>&ltq></b> — дочерние элементы для <b><р></b>;</li>
+        <li><b>&ltstrong></b> и <b>&ltq></b> — братские элементы.</li>
+    </ul>
+    
+    <h2>Порядок</h2>
+    <p>Как работает вложение, зависит от расположения открывающего и закрывающего тегов.</p>
+    <p>Поскольку элемент HTML содержит открывающий тег, закрывающий тег и всё между ними, дочерний элемент должен быть закрыт до закрытия родительского элемента.</p>
+    <p>Неверно:</p>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltp>
+  Этот код HTML не будет работать, потому что тег strong я открыл здесь, 
+  &ltstrong>но закрыл его только после абзаца.
+  &lt/p>&lt/strong></code></pre>
+    <p>Поскольку <b>&ltstrong></b> был открыт после <b><р></b> (и, таким образом, считается потомком <b><р></b>), элемент <b>&ltstrong></b> должен быть закрыт перед родительским <b></р></b>.</p>
+    <p>Верно:</p>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltp>
+  Этот код HTML будет работать, потому что тег strong я открыл &ltstrong>и 
+  закрыл&lt/strong> правильно.
+  &lt/p></code></pre>
+    <h2>Глубина</h2>
+    <p>Поскольку дочерние элементы сами по себе могут содержать другие дочерние элементы, то можно написать более глубокую иерархию внутри HTML-документа.</p>
+    <p>Наш абзац выше может быть частью статьи блога:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltarticle>
+    &lth1>Известные футбольные цитаты&lt/h1>
+    &ltp>
+        Сэр &ltstrong>Алекс Фергюсон&lt/strong> однажды сказал о Филиппо Индзаги: 
+        &ltq>Этот парень должен был родиться в положении вне игры&lt/q>.
+    &lt/p>
+    &ltp>
+        При критике со стороны Джона Карью, &ltstrong>Златан Ибрагимович&lt/strong> 
+        ответил: 
+        &ltq>То, что делает Карью с мячом, я могу сделать с апельсином.&lt/q>
+    &lt/p>
+    &ltp>
+        &ltstrong>Джордж Бест&lt/strong> сказал: 
+        &ltq>Я потратил много денег на выпивку, девчонок и быстрые автомобили. 
+        Остальное я просто промотал&lt/q>, —  
+        когда его спросили о его образе жизни.
+    &lt/p>
+  &lt/article></code></pre>
+    <p>В этой структуре:</p>
+    <ul>
+        <li><b>&ltarticle></b> является предком для любого другого элемента;</li>
+        <li><b>&ltarticle></b> является родителем для <b>&lth1></b> и трёх <b><р></b>;</li>
+        <li><b>&lth1></b> и три <b><р></b> являются братскими друг для друга;</li>
+        <li>каждый <b><р></b> является родителем для <b>&ltstrong></b> и <b>&ltq></b>, которые в них содержатся;</li>
+        <li>каждый <b>&lth1></b>, <b>&ltp></b>, <b>&ltstrong></b> и <b>&ltq></b> — это всё потомки <b>&ltarticle></b>.</li>
+    </ul>
+
+    <h2>Вложения блоков и строк</h2>
+    <p>Блочные элементы могут содержать блочные или строчные элементы.</p>
+    <p>Однако, строчные элементы могут содержать только другие строчные элементы (за исключением элемента <b>&lta></b>).</p>
+    <p>Неверно:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px;">
+<code class="language-html" style="text-shadow: none;">&ltstrong>
+    &ltp>Вы не можете поместить абзац внутрь тега strong.
+  &lt/strong></code></pre>
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+    <script>
+        // Заголовок страницы (h2)
+        var title = 'Срез по теме "Иерархия HTML"';
+
+        // Это ваши вопросы
+        var questions = [
+            {
+                text: "Какой из элементов задает определенный текст более важным в HTML?",
+                answers: [
+                    "&ltp>",
+                    "&ltstrong>",
+                    "&ltq>"
+                    ],
+                correctAnswer: 1
+            },
+            {
+                text: "Верное утверждение о порядке закрытия тегов в HTML:",
+                answers: [
+                    "Дочерний элемент должен быть закрыт после родительского элемента",
+                    "Дочерний элемент должен быть закрыт перед родительским элементом",
+                    "Порядок закрытия тегов не имеет значения",
+                    ],
+                correctAnswer: 1
+            },
+            {
+                text: "Какие элементы в HTML могут содержать только другие строчные элементы?",
+                answers: [
+                    "&ltstrong>",
+                    "&ltsp>",
+                    "&lta>",
+                    ],
+                correctAnswer: 2
+            }
+        ];
+
+        var yourAns = new Array;
+        var score = 0;
+
+        function Engine(question, answer) {
+            yourAns[question] = answer;
+        }
+
+        function Score() {
+            for (var i = 0; i < yourAns.length; ++i) {
+                if (yourAns[i] == questions[i].correctAnswer) {
+                    ++score;
+                }
+            }
+
+            alert("Всего правильных ответов: " + score + " из 3");
+            yourAns = [];
+            score = 0;
+            clearForm("quiz");
+        }
+
+        function clearForm(name) {
+            var f = document.forms[name];
+            for (var i = 0; i < f.elements.length; ++i) {
+                if (f.elements[i].checked)
+                    f.elements[i].checked = false;
+            }
+        }
+    </script>
+
+    <h2><script>document.write(title)</script></h2>
+
+    <form name="quiz">
+        <ol>
+            <script>
+                for(var q=0; q<questions.length; ++q) {
+                    var question = questions[q];
+                    var idx = 1 + q;
+
+                    document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                    for(var i in question.answers) {
+                        document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                    }
+                    document.writeln('</li>');
+                }
+            </script>
+        </ol>
+        <br>
+        <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px ">
+    </form>
+</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

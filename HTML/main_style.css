@@ -1,0 +1,802 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tenor+Sans&display=swap');
+body {
+  background-color: #1f2d3b;
+  color: Ivory;
+  font-family: "Finlandica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+
+
+
+.content{
+    padding-top: 25px;
+    width: 70%;
+    height: 35px;
+    margin-left: 15%;
+    margin-top: -15px;
+    text-align: center;
+
+}
+.cap{ 
+    width: 101%;
+    height: 60px;
+    background-color: #1f2d3b;
+    margin-left: -10px;
+    margin-top: -10px;
+    box-shadow: 0 -15px 30px 10px rgba(0, 0, 0, .5);    
+    /* border-bottom: 3px solid rgba(0, 0, 0, 0.118); - так пизже но марков хуйло  */
+
+}
+.mainBtn{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+    margin-right: 25px;
+    color: #8694a4;
+    transition-duration: 0.4s;
+    font-size: 14px;
+
+}    
+
+.mainBtn:hover{
+    color: rgb(232, 73, 33);
+    opacity: 0.4s;
+}
+
+.mainBtn1{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 25px;
+    color: #8694a4;
+    color: #8694a4;
+    font-size: 14px;
+    transition-duration: 0.4s;
+}
+.mainBtn1:hover {
+   color: rgb(232, 73, 33);
+    opacity: 0.4s;
+}
+
+.logo{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    font-weight: bold;
+    margin-left:8.5% ;
+    font-family: "Finlandica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.nach{
+    width: 80%;
+    margin-left: 10%;
+    border-bottom: 1px solid #8694a4;
+    color: #8694a4;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.block{
+    margin: 1% 0 0 20%;
+}
+
+  
+
+
+
+
+
+
+
+
+.info__headline{
+  font-size: 30px;
+  width: 29%;
+  color: white;
+  transition-duration: 0.4s;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline:hover {
+  color: orange;
+}
+.info {
+  padding: 10px 25px;
+}
+.info__switch {
+  display: none;
+}
+.info__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-duration: 0.4s;
+}
+.info__switch:checked~.info__body {
+  max-height: initial;
+}
+.info__switch:checked~.info__headline::before {
+  transform: rotate(180deg) translateY(6px);
+}
+.info__headline {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline:hover {
+  text-decoration: underline;
+}
+.somethingonpage {
+  margin-top: 1000px;
+}
+.info iframe {
+  width: 110%;
+  height: 310vh;
+  border: none;
+  margin-left: -20%;
+}
+.collapse-btn {
+  display: none; /* Чтобы спрятать кнопку изначально */
+}
+.info__switch:checked~.info__body + a {
+  display: block; /* Показываем кнопку "Свернуть" при разворачивании */
+}
+.collapse-btn {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.collapse-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+
+.info__headline_1{
+  font-size: 30px;
+  width: 29%;
+  color: white;
+  transition-duration: 0.4s;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_1:hover {
+  color: orange;
+}
+.info_1 {
+  padding: 10px 25px;
+}
+.info__switch_1 {
+  display: none;
+}
+.info__body_1 {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-duration: 0.4s;
+}
+.info__switch_1:checked~.info__body_1{
+  max-height: initial;
+}
+.info__switch_1:checked~.info__headline_1::before {
+  transform: rotate(180deg) translateY(6px);
+}
+.info__headline_1 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_1:hover {
+  text-decoration: underline;
+}
+.somethingonpage_1 {
+  margin-top: 1000px;
+}
+.info_1 iframe {
+  width: 110%;
+  height: 280vh;
+  border: none;
+  margin-left: -20%;
+}
+.collapse-btn_1 {
+  display: none; /* Чтобы спрятать кнопку изначально */
+}
+.info__switch_1:checked~.info__body_1 + a {
+  display: block; /* Показываем кнопку "Свернуть" при разворачивании */
+}
+.collapse-btn_1 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.collapse-btn_1:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+
+.info__headline_2{
+  font-size: 30px;
+  width: 29%;
+  color: white;
+  transition-duration: 0.4s;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_2:hover {
+  color: orange;
+}
+.info_2 {
+  padding: 10px 25px;
+}
+.info__switch_2 {
+  display: none;
+}
+.info__body_2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-duration: 0.4s;
+}
+.info__switch_2:checked~.info__body_2{
+  max-height: initial;
+}
+.info__switch_2:checked~.info__headline_2::before {
+  transform: rotate(180deg) translateY(6px);
+}
+.info__headline_2 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_2:hover {
+  text-decoration: underline;
+}
+.somethingonpage_2 {
+  margin-top: 1000px;
+}
+.info_2 iframe {
+  width: 110%;
+  height: 300vh;
+  border: none;
+  margin-left: -20%;
+}
+.collapse-btn_2 {
+  display: none; /* Чтобы спрятать кнопку изначально */
+}
+.info__switch_2:checked~.info__body_2 + a {
+  display: block; /* Показываем кнопку "Свернуть" при разворачивании */
+}
+.collapse-btn_2 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.collapse-btn_2:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+
+.info__headline_3{
+  font-size: 30px;
+  width: 29%;
+  color: white;
+  transition-duration: 0.4s;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_3:hover {
+  color: orange;
+}
+.info_3 {
+  padding: 10px 25px;
+}
+.info__switch_3 {
+  display: none;
+}
+.info__body_3 {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-duration: 0.4s;
+}
+.info__switch_3:checked~.info__body_3{
+  max-height: initial;
+}
+.info__switch_3:checked~.info__headline_3::before {
+  transform: rotate(180deg) translateY(6px);
+}
+.info__headline_3 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_3:hover {
+  text-decoration: underline;
+}
+.somethingonpage_3 {
+  margin-top: 1000px;
+}
+.info_3 iframe {
+  width: 110%;
+  height:375vh;
+  border: none;
+  margin-left: -20%;
+}
+.collapse-btn_3 {
+  display: none; /* Чтобы спрятать кнопку изначально */
+}
+.info__switch_3:checked~.info__body_3 + a {
+  display: block; /* Показываем кнопку "Свернуть" при разворачивании */
+}
+.collapse-btn_3 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.collapse-btn_3:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+
+
+.info__headline_4{
+  font-size: 30px;
+  width: 29%;
+  color: white;
+  transition-duration: 0.4s;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_4:hover {
+  color: orange;
+}
+.info_4 {
+  padding: 10px 25px;
+}
+.info__switch_4 {
+  display: none;
+}
+.info__body_4 {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-duration: 0.4s;
+}
+.info__switch_4:checked~.info__body_4{
+  max-height: initial;
+}
+.info__switch_4:checked~.info__headline_4::before {
+  transform: rotate(180deg) translateY(6px);
+}
+.info__headline_4 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_4:hover {
+  text-decoration: underline;
+}
+.somethingonpage_4 {
+  margin-top: 1000px;
+}
+.info_4 iframe {
+  width: 110%;
+  height:300vh;
+  border: none;
+  margin-left: -20%;
+}
+.collapse-btn_4 {
+  display: none; /* Чтобы спрятать кнопку изначально */
+}
+.info__switch_4:checked~.info__body_4 + a {
+  display: block; /* Показываем кнопку "Свернуть" при разворачивании */
+}
+.collapse-btn_4 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.collapse-btn_4:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+
+
+.info__headline_5{
+  font-size: 30px;
+  width: 29%;
+  color: white;
+  transition-duration: 0.4s;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_5:hover {
+  color: orange;
+}
+.info_5 {
+  padding: 10px 25px;
+}
+.info__switch_5 {
+  display: none;
+}
+.info__body_5 {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-duration: 0.4s;
+}
+.info__switch_5:checked~.info__body_5{
+  max-height: initial;
+}
+.info__switch_5:checked~.info__headline_5::before {
+  transform: rotate(180deg) translateY(6px);
+}
+.info__headline_5 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_5:hover {
+  text-decoration: underline;
+}
+.somethingonpage_5 {
+  margin-top: 1000px;
+}
+.info_5 iframe {
+  width: 110%;
+  height:270vh;
+  border: none;
+  margin-left: -20%;
+}
+.collapse-btn_5 {
+  display: none; /* Чтобы спрятать кнопку изначально */
+}
+.info__switch_5:checked~.info__body_5 + a {
+  display: block; /* Показываем кнопку "Свернуть" при разворачивании */
+}
+.collapse-btn_5 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.collapse-btn_5:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+
+
+.info__headline_6{
+  font-size: 30px;
+  width: 29%;
+  color: white;
+  transition-duration: 0.4s;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_6:hover {
+  color: orange;
+}
+.info_6 {
+  padding: 10px 25px;
+}
+.info__switch_6 {
+  display: none;
+}
+.info__body_6 {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-duration: 0.4s;
+}
+.info__switch_6:checked~.info__body_6{
+  max-height: initial;
+}
+.info__switch_6:checked~.info__headline_6::before {
+  transform: rotate(180deg) translateY(6px);
+}
+.info__headline_6 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_6:hover {
+  text-decoration: underline;
+}
+.somethingonpage_6 {
+  margin-top: 1000px;
+}
+.info_6 iframe {
+  width: 110%;
+  height:220vh;
+  border: none;
+  margin-left: -20%;
+}
+.collapse-btn_6 {
+  display: none; /* Чтобы спрятать кнопку изначально */
+}
+.info__switch_6:checked~.info__body_6 + a {
+  display: block; /* Показываем кнопку "Свернуть" при разворачивании */
+}
+.collapse-btn_6 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.collapse-btn_6:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+
+
+.info__headline_7{
+  font-size: 30px;
+  width: 29%;
+  color: white;
+  transition-duration: 0.4s;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_7:hover {
+  color: orange;
+}
+.info_7 {
+  padding: 10px 25px;
+}
+.info__switch_7 {
+  display: none;
+}
+.info__body_7 {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-duration: 0.4s;
+}
+.info__switch_7:checked~.info__body_7{
+  max-height: initial;
+}
+.info__switch_7:checked~.info__headline_7::before {
+  transform: rotate(180deg) translateY(6px);
+}
+.info__headline_7 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.info__headline_7:hover {
+  text-decoration: underline;
+}
+.somethingonpage_7 {
+  margin-top: 1000px;
+}
+.info_7 iframe {
+  width: 110%;
+  height:540vh;
+  border: none;
+  margin-left: -20%;
+}
+.collapse-btn_7 {
+  display: none; /* Чтобы спрятать кнопку изначально */
+}
+.info__switch_7:checked~.info__body_7 + a {
+  display: block; /* Показываем кнопку "Свернуть" при разворачивании */
+}
+.collapse-btn_7 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.collapse-btn_7:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+
+
+
+
+.footer {
+  margin: 0 auto;
+  height: 200px;
+  margin-top: 8%;
+}
+.futer_logo {
+  display: flex;
+}
+
+.logo1{
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-left:0 auto;
+    text-align: center; 
+    width: 15%;
+    height: 50px;
+}
+
+.cherta {
+  width: 35%;
+  height: 1px;
+  background-color: white;
+  margin-top: 20px;
+}
+.footer2 {
+  height: 200px;
+}
+.data {
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.data p {
+  font-size: 11px;
+  color: white;
+
+}
+.our_place {
+  margin: 0 auto;
+  width: 250px;
+  text-align: center;
+}
+.test {
+  text-indent: 0px;
+}

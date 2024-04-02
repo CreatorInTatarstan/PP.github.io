@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="form_html_style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Prism.highlightAll();
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>    
+</head>
+<body>
+ 
+
+
+
+
+<div class="cont">
+	<hr class="cherta"></hr>
+	<p>Существует разница между тем, что написано в вашем коде HTML и что отображается в браузере. Как мы уже видели, теги HTML, такие как <b>&ltр></b>, только читаются браузером (чтобы знать, какой тип содержимого написан), но не отображаются в нём. Мы также видели, как можно писать комментарии в коде HTML, чтобы помочь человеку с чтением кода, без необходимости отображать эти комментарии в браузере.</p>
+    <p>Другим видом написанного кода, который игнорируется браузером, является пробел, он включает в себя:</p>
+    <ul>
+        <li>переносы строк;</li>
+        <li>пустые строки;</li>
+        <li>табуляция (или отступы).</li>
+    </ul>
+    <h2>Переносы строк</h2>
+    <p>Переносы строк и пустые строки (которые представляют собой последовательность переносов строк) в коде HTML игнорируются браузером. Они составляют лишь единое пространство.  </p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+  <code class="language-html" style="text-shadow: none; ">&ltblockquote>
+        Первоначальная идея веба была в том, что он должен быть совместным
+
+
+        пространством,
+
+
+        где вы можете общаться путём обмена информацией.
+    &lt/blockquote></code></pre>
+    <p>Чтобы реально вставить перенос строки вам нужно использовать элемент <b>&ltbr></b>:</p>
+     <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+  <code class="language-html" style="text-shadow: none; ">&ltp>В лучшем случае, жизнь совершенно&ltbr>непредсказуема&lt/p></code></pre>
+  <h2>Табуляция</h2>
+  <p><b>Табуляция</b> — это специальный символ, полученный с помощью клавиши <b>Tab</b>. Она обычно перемещает курсор на следующую позицию табуляции, но иногда превращается в два пробела. Во всяком случае, как и обычный пробел, табуляция невидима. Она также игнорируется браузером:</p>
+  <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+  <code class="language-html" style="text-shadow: none; ">&ltp>
+        Давайте толкнём       этот текст
+        табуляцией.
+    &lt/p></code></pre>
+    <p>Если вы хотите добавить пространство перед словом, вам придётся использовать CSS. Если вы хотите закрыть элемент HTML, то должны сперва закрыть все его дочерние элементы.</p>
+    <h2>Форматирование в виде дерева</h2>
+    <p>Поскольку элементы HTML могут быть вложены друг в друга, вы должны следить за порядком, в котором они были открыты, так как это будет влиять на порядок, в котором они закрыты.</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+  <code class="language-html" style="text-shadow: none; ">&ltarticle>&ltp>Данный код написан в &ltstrong>одну&lt/strong> строку.&lt/p>&lt/article></code></pre>
+    <p>Из-за того, что может быть сложно следить за порядком, в котором были открыты элементы HTML, рекомендуется писать HTML в виде дерева:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+  <code class="language-html" style="text-shadow: none; ">&ltarticle>
+        &ltp>
+            Данный код написан в 
+            &ltstrong>несколько&lt/strong>
+            строк, но тем не менее, будет 
+            отображаться как
+            &ltem>одна&lt/em>
+            строка.
+        &lt/p>
+    &lt/article></code></pre>
+    <p>Форматирование в виде дерева позволяет визуально воспроизвести уровень вложенности вашего кода HTML. Это позволяет легко увидеть, что:</p>
+    <ul>
+        <li><b>&ltarticle></b> является предком;</li>
+        <li><b>&ltp></b> — родитель для <b>&ltstrong></b> и <b>&ltem></b>;</li>
+        <li><b>&ltstrong></b> и <b>&ltem></b> — это братские элементы.</li>
+    </ul>
+    <h2>Пишите HTML для себя, чтобы его читать</h2>
+    <p>Табуляция, пустые строки, набор пробелов и переносы строк опускаются компьютером и все они превращаются в один пробел.</p>
+    <p>HTML-документ пишется и читается человеком, но компьютером только читается. Учитывая, что табуляция, пробелы и переносы строк не влияют на то, как браузер будет читать и впоследствии отображать веб-страницу, вы можете отформатировать свой документ наиболее читаемым для себя способом.</p>
+    <p>Нет конкретных правил, касающихся форматирования HTML, но есть неявные соглашения, в частности:</p>
+    <ul>
+        <li>используйте <b>табуляцию</b>, чтобы помочь визуализировать <b>вложения</b> элементов HTML;
+</li>
+        <li>вставляйте открывающие и закрывающие теги блочных элементов на <b>отдельные строки</b>;</li>
+        <li>пишите строчные элементы в одну строку (включая открывающие и закрывающие теги).</li>
+    </ul>
+
+
+
+
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+    <script>
+        // Заголовок страницы (h2)
+        var title = 'Срез по теме "Форматирование HTML"';
+
+        // Это ваши вопросы
+        var questions = [
+            {
+                text: "Что игнорирует браузер в коде HTML?",
+                answers: [
+                	"Теги &ltp>",
+                	"Переносы строк и пустые строки",
+                	"Элементы &ltheader>"],
+                correctAnswer: 1
+            },
+            {
+                text: "Какой HTML элемент используется для добавления прерывания строки?",
+                answers: [
+                	"&lthr>",
+                	"&ltp>",
+                	"&ltbr>"],
+                correctAnswer: 2
+            },
+            {
+                text: "Что рекомендуется для лучшего визуального представления уровня вложенности кода HTML?",
+                answers: [
+                	"Писать HTML в виде дерева",
+                	 "Использование табуляции и пробелов",
+                	 "Оборачивать код в элементы &ltpre>"],
+                correctAnswer: 0
+            }
+        ];
+
+        var yourAns = new Array;
+        var score = 0;
+
+        function Engine(question, answer) {
+            yourAns[question] = answer;
+        }
+
+        function Score() {
+            for (var i = 0; i < yourAns.length; ++i) {
+                if (yourAns[i] == questions[i].correctAnswer) {
+                    ++score;
+                }
+            }
+
+            alert("Всего правильных ответов: " + score + " из 3");
+            yourAns = [];
+            score = 0;
+            clearForm("quiz");
+        }
+
+        function clearForm(name) {
+            var f = document.forms[name];
+            for (var i = 0; i < f.elements.length; ++i) {
+                if (f.elements[i].checked)
+                    f.elements[i].checked = false;
+            }
+        }
+    </script>
+
+    <h2><script>document.write(title)</script></h2>
+
+    <form name="quiz">
+        <ol>
+            <script>
+                for(var q=0; q<questions.length; ++q) {
+                    var question = questions[q];
+                    var idx = 1 + q;
+
+                    document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                    for(var i in question.answers) {
+                        document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                    }
+                    document.writeln('</li>');
+                }
+            </script>
+        </ol>
+        <br>
+        <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px ">
+    </form>
+</div>
+</div>
+
+</body>
+</html>

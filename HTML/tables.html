@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="tables_style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css">
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Prism.highlightAll();
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>    
+</head>
+<body>
+ 
+
+
+
+
+<div class="cont">
+	<hr class="cherta"></hr>
+	<p>Помимо прочих объектов в свой сайт Вы можете вставить таблицы. Они имеют не малую значимость при создании сайта. С помощью таблицы можно
+не только выложить ту или иную информацию, тарифную сетку или график дежурств к примеру,
+но и взяв ёе за основу полностью построить на ней свой сайт, таблицы порой незаменимы при
+верстке страницы, но об этом позже.</p>
+    <p>Тег <b>&lttable></b> задаёт начало и конец таблицы, любая таблица, как известно, состоит из строк и столбцов, для этого есть ещё два тега:</p>
+    <ul style="list-style-type: none;">
+        <li>&lttr> - строка таблицы</li>
+        <li>&lttd> - столбец таблицы</li>
+    </ul>
+    <p>Вместе эти теги пишутся так:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-html" style="text-shadow: none; ">&lttable>
+        &lttr>
+        &lttd>ячейка&lt/td>
+        &lt/tr>
+  &lt/table></code></pre>
+  <p>Такая запись это самая маленькая таблица, в ней всего одна строка, содержащая один
+столбец - ячейку</p>
+    <p>Поставим перед собой задачу нарисовать таблицу из трёх строк и трёх столбцов, а заодно
+вспомним атрибут <b>border</b> "рамка", который добавит нам наглядности.</p>
+<pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-html" style="text-shadow: none; ">&lthtml>
+        &lthead>
+            &lttitle>Таблица&lt/title>
+        &lt/head>
+        &ltbody>
+            &lttable border="1">
+                &lttr>
+                    &lttd>строка1 ячейка1&lt/td>
+                    &lttd>строка1 ячейка2&lt/td>
+                    &lttd>строка1 ячейка3&lt/td>
+                &lt/tr>
+                &lttr>
+                    &lttd>строка2 ячейка1&lt/td>
+                    &lttd>строка2 ячейка2&lt/td>
+                    &lttd>строка2 ячейка3&lt/td>
+                &lt/tr>
+                &lttr>
+                    &lttd>строка3 ячейка1&lt/td>
+                    &lttd>строка3 ячейка2&lt/td>
+                   &lttd>строка3 ячейка3&lt/td>
+                &lt/tr>
+            &lt/table>
+        &lt/body>
+  &lt/html></code></pre>
+    <h2>Объединение ячеек</h2>
+    <p>Часто при работе с таблицами возникает необходимость объединить те или иные ячейки в
+одну. На самом деле слово "объединить" здесь неуместно. Вспомните тот же Word, добавив там таблицу Вы выделяете нужные ячейки и нажимаете кнопку "объединить". Здесь всё происходит не совсем так, и
+правильнее было бы говорить не "объединить" а "растянуть".</p>
+    <p>Эту задачу решают атрибуты <b>colspan</b> и <b>rowspan</b></p>
+    <ul style="list-style-type: none;">
+        <li><b>colspan</b> - определяет какое количество столбцов будет занимать данная ячейка</li>
+        <li><b>rowspan</b> - количество рядов занимаемое ячейкой </li>
+    </ul>
+    <p>Предположим что в нашем примере нам необходимо "объединить" в третьей строке вторую и
+третью ячейку, для этого атрибуту <b>colspan</b> присваиваем значение 2 (растянуть на два столбца)
+и вставляем его в нужное место.</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-html" style="text-shadow: none; ">&lttable border="1">
+    &lttr>
+        &lttd>строка1 ячейка1&lt/td>
+        &lttd>строка1 ячейка2&lt/td>
+        &lttd>строка1 ячейка3&lt/td>
+    &lt/tr>
+    &lttr>
+        &lttd>строка2 ячейка1&lt/td>
+        &lttd>строка2 ячейка2&lt/td>
+        &lttd>строка2 ячейка3&lt/td>
+    &lt/tr>
+    &lttr>
+        &lttd>строка3 ячейка1&lt/td>
+        &lttd colspan="2">строка3 ячейка2&lt/td>
+        &lttd>строка3 ячейка3&lt/td>
+    &lt/tr>
+ &lt/table></code></pre>
+    <p>Как видите ячейка растянулась на два столбца, но при этом сдвинула третью ячейку, которая
+собственно нам теперь не нужна, а по сему мы её просто напросто удаляем.</p>
+    <p>Исправленный пример:</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-html" style="text-shadow: none; ">&lttable border="1">
+    &lttr>
+        &lttd>строка1 ячейка1&lt/td>
+        &lttd>строка1 ячейка2&lt/td>
+        &lttd>строка1 ячейка3&lt/td>
+    &lt/tr>
+    &lttr>
+        &lttd>строка2 ячейка1&lt/td>
+        &lttd>строка2 ячейка2&lt/td>
+        &lttd>строка2 ячейка3&lt/td>
+    &lt/tr>
+    &lttr>
+        &lttd>строка3 ячейка1&lt/td>
+        &lttd colspan="2">строка3 ячейка2&lt/td>
+    &lt/tr>
+ &lt/table></code></pre>
+    <p>Теперь попробуем объединить весь первый столбец в одну ячейку, используя атрибут 
+<b>rowspan</b>, ну точнее растянем ячейку первой строчки первого столбца на три строки и на сей раз
+сразу уберём лишнее</p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-html" style="text-shadow: none; ">&lttable border="1">
+    &lttr>
+        &lttd rowspan="3">строка1 ячейка1&lt/td>
+        &lttd>строка1 ячейка2&lt/td>
+        &lttd>строка1 ячейка3&lt/td>
+    &lt/tr>
+    &lttr>
+        &lttd>строка2 ячейка2&lt/td>
+        &lttd>строка2 ячейка3&lt/td>
+    &lt/tr>
+    &lttr>
+        &lttd colspan="2">строка3 ячейка2&lt/td>
+    &lt/tr>
+ &lt/table></code></pre>
+    <h2>Размеры таблицы</h2>
+    <p>Если Вы самостоятельно тренировались с рисованием таблицы то наверняка обратили
+внимание на то, что размеры таблицы и ячеек по умолчанию ограничены вставленным в неё
+текстом, и "ползают" себе как хотят. Вспомните про атрибуты <b>width</b> - ширина и <b>height</b> - высота, они так же применимы к тегам <b>&lttable></b>,
+<b>&lttr></b> и <b>&lttd></b>. С этими атрибутами Вы знакомы, просто приведу пример. В нём заданы размеры таблицы и отдельных её ячеек, а заодно и вся таблица
+выровнена по центру знакомым тегом <b>&ltcenter></b></p>
+ <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-html" style="text-shadow: none; ">&ltcenter>
+    &lttable border="1" width="640" height="480">
+        &lttr>
+            &lttd rowspan="3" width="150">строка1 ячейка1&lt/td>
+            &lttd height="30">строка1 ячейка2&lt/td>
+            &lttd>строка1 ячейка3&lt/td>
+        &lt/tr>
+        &lttr>
+            &lttd height="30">строка2 ячейка2&lt/td>
+            &lttd>строка2 ячейка3&lt/td>
+        &lt/tr>
+        &lttr>
+            &lttd colspan="2" >строка3 ячейка2&lt/td>
+        &lt/tr>
+    &lt/table>
+ &lt/center></code></pre>
+    <p>Обратите внимание на то, что длина и ширина заданы не для всех ячеек. А зачем? Если и так
+таблица будет выровнена по самым широким и длинным ячейкам.. на то она и таблица.</p> 
+<p>Значения атрибутов <b>width</b> и <b>height</b> в таблице могут указываться не только в пикселях, но и
+в процентах </p>
+    <pre class="code" style="background-color: Ivory; width:80%; border-radius: 10px">
+<code class="language-html" style="text-shadow: none; ">&ltcenter>
+    &lttable border="1" width="640" height="480">
+        &lttr height="25%">
+            &lttd width="15%"> строка1 ячейка1&lt/td>
+            &lttd width="25%">строка1 ячейка2&lt/td>
+            &lttd width="60%">строка1 ячейка3&lt/td>
+        &lt/tr>
+        &lttr height="50%">
+            &lttd>строка2 ячейка1&lt/td>
+            &lttd>строка2 ячейка2&lt/td>
+            &lttd>строка2 ячейка3&lt/td>
+        &lt/tr>
+        &lttr height="25%">
+            &lttd>строка3 ячейка1&lt/td>
+            &lttd>строка3 ячейка2&lt/td>
+            &lttd>строка3 ячейка3&lt/td>
+        &lt/tr>
+    &lt/table>
+&lt/center></code></pre>
+    <p>В этом примере от общей ширины таблицы в 640 пикселей мы отдали 15% первой ячейке,
+25% второй и 60% третьей. А по высоте из 480 пикселей по 25% первой и третьей строчке, а
+добрую половину места второй. Короче справедливости в мире нет. Ну до это Вам решать,
+сколько кому места отчуждать, главное, чтобы в сумме было 100%, иначе неразбериха будет.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="test" style="margin-top: 70px; line-height: 25px">
+
+<script>
+    // Заголовок страницы (h2)
+    var title = 'Срез по теме "Таблицы"';
+
+    // Это ваши вопросы
+    var questions=[
+        {
+            text: "Какие теги используются для создания таблицы в HTML?",
+            answers: 
+                ["&ltrow> и &ltcol>",
+                "&lttable>, &lttr> и &lttd>",
+                "&ltdiv> и &ltspan>"],
+            correctAnswer: 1 // нумерация ответов с нуля!
+        },
+        {
+            text: "Какой атрибут определяет количество столбцов, которое займет данная ячейка?",
+            answers: 
+                ["colspan",
+                "rowspan",
+                "merge "],
+            correctAnswer: 0
+        },
+        {
+            text: "Как задать объединение ячеек в одну, растянув ее на три строки? ",
+            answers:
+                ["&lttd colspan=&quot1&quot>",
+                "&lttd rowspan=&quot3&quot>",
+                "&lttd colspan=&quot3&quot>"],
+            correctAnswer: 2
+        },
+        {
+            text: "Как указать размеры таблицы и ячеек в процентах от общей ширины и высоты?",
+            answers: 
+                    ["Атрибуты size и length",
+                    "Атрибуты width` и height", 
+                    "Атрибуты width_percent и height_percent "],
+            correctAnswer: 1
+        },
+        {
+            text: "Как выровнять всю таблицу по центру?",
+            answers: 
+                ["&lttable align=&quotcenter&quot>", 
+                "&lttable valign=&quotcenter&quot>", 
+                "&ltcenter>&lttable>&lt/table>&lt/center>"],
+            correctAnswer: 2
+        }
+    ];
+
+    var yourAns = new Array;
+    var score = 0;
+
+    function Engine(question, answer) {
+        yourAns[question] = answer;
+    }
+
+    function Score() {
+        for (var i = 0; i < yourAns.length; ++i) {
+            if (yourAns[i] == questions[i].correctAnswer) {
+                ++score;
+            }
+        }
+
+        alert("Всего правильных ответов: " + score + " из 5");
+        yourAns = [];
+        score = 0;
+        clearForm("quiz");
+    }
+
+    function clearForm(name) {
+        var f = document.forms[name];
+        for (var i = 0; i < f.elements.length; ++i) {
+            if (f.elements[i].checked)
+                f.elements[i].checked = false;
+        }
+    }
+</script>
+
+<h2><script>document.write(title)</script></h2>
+<h3><script>document.write(subtitle)</script></h3>
+
+<form name="quiz">
+    <ol>
+        <script>
+            for(var q=0; q<questions.length; ++q) {
+                var question = questions[q];
+                var idx = 1 + q;
+
+                document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                for(var i in question.answers) {
+                    document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                        '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+                }
+                document.writeln('</li>');
+            }
+        </script>
+    </ol>
+    <br>
+    <input type="button" onClick="Score()" value="Проверить результаты" style="width: 180px; height: 40px; text-align: center; font-size: 15px; margin: -10px 0 0 40px  ">
+</form>
+</div>
+</div>
+
+</body>
+</html>
